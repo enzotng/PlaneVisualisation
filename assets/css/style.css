@@ -1,0 +1,233 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1 {
+  font-size: clamp(19px, 32px, 4.1666666667vw);
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat";
+  color: #fff;
+  background-image: url("../../assets/images/png/pexels-marina-hinic-730778.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #0e0e0e;
+  transition: color 0.3s;
+}
+a:hover {
+  color: #f2f3f4;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: 80px;
+  padding: 20px;
+}
+header nav img {
+  width: 4vw;
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+header nav ul i {
+  color: #fff;
+  padding-inline-start: 10px;
+}
+header nav ul li {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header nav ul li a {
+  color: #fff;
+}
+header nav ul li a:hover {
+  color: #0e0e0e;
+}
+
+.hero {
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero p {
+  width: 25vw;
+  padding: 20px;
+  text-align: center;
+}
+
+.canvas {
+  height: 100vh;
+  background: #191919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */

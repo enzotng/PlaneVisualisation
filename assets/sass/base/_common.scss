@@ -1,0 +1,28 @@
+*{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: $font-titre;
+  color: $white;
+  background-image: url('../../assets/images/png/pexels-marina-hinic-730778.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: bold;
+}
+
+a{
+  text-decoration: none;
+  color: $background;
+  transition: color 0.3s;
+  &:hover{
+    color: #f2f3f4;
+  }
+}
+
+
+
