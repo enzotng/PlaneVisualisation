@@ -1,0 +1,24 @@
+.preloader {
+    height: 100vh;
+    position: relative;
+    .loader {
+        background: url('../../assets/images/svg/preloader.svg') 50% 50% no-repeat #fff;
+        cursor: wait;
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            color: $background;
+            font-size: 1.5rem;
+            width: 30%;
+            text-align: center;
+            margin-top: 20vh;
+        }
+    }
+}

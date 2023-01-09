@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/images/ico/Martz90-Circle-Addon2-Plane-flight.ico" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>PlaneVisualisation - Les vols en temps réel</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="./assets/images/ico/Martz90-Circle-Addon2-Plane-flight.ico" alt="Logo Avion">
+            <ul>
+                <li><a href="">Home</a><i class="bi bi-airplane-fill"></i></li>
+                <li><a href="">Charts</a><i class="bi bi-bar-chart-fill"></i></li>
+                <li><a href="">Contact</a><i class="bi bi-envelope-fill"></i></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="preloader">
+            <div class="loader">
+                <h1>Veuillez patientez pendant le chargement de la page.</h1>
+                </div>
+                <script>
+                jQuery(window).load(function(){ jQuery(".loader").fadeOut("200"); });
+                </script>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+<script src="./assets/js/script/main.js"></script>
+
+</html>

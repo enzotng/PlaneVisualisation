@@ -150,6 +150,7 @@ body {
   background-image: url("../../assets/images/png/pexels-marina-hinic-730778.jpg");
   background-size: contain;
   background-repeat: no-repeat;
+  font-size: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -165,6 +166,48 @@ a:hover {
   color: #f2f3f4;
 }
 
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 header {
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.15);
@@ -173,6 +216,7 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.18);
   width: 100%;
   position: sticky;
+  z-index: 9999;
   top: 0;
 }
 header nav {
@@ -210,11 +254,17 @@ header nav ul li a:hover {
 }
 
 .hero {
-  height: calc(100vh - 80px);
+  height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: absolute;
+  top: 0;
+}
+.hero h1 {
+  font-size: 2rem;
 }
 .hero p {
   width: 25vw;
@@ -223,11 +273,92 @@ header nav ul li a:hover {
 }
 
 .canvas {
-  height: 100vh;
+  height: calc(100vh - 80px);
   background: #191919;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.canvas h1 {
+  margin-inline: 5vw;
+}
+
+.canvas2 {
+  height: calc(100vh - 80px);
+  background: #07062c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.canvas2 h1 {
+  margin-inline: 5vw;
+  color: #fff;
+}
+.canvas2 .widget {
+  margin: 0 auto;
+  width: 350px;
+  margin-top: 50px;
+  background-color: #222D3A;
+  border-radius: 5px;
+  box-shadow: 0px 0px 1px 0px #06060d;
+}
+.canvas2 .header {
+  background-color: #29384D;
+  height: 40px;
+  color: #929DAF;
+  text-align: center;
+  line-height: 40px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  font-weight: 400;
+  font-size: 1.5em;
+  text-shadow: 1px 1px #06060d;
+}
+.canvas2 .chart-container {
+  padding: 25px;
+}
+.canvas2 .shadow {
+  -webkit-filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.5));
+}
+
+.canvas3 {
+  height: calc(100vh - 80px);
+  background: #191919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.canvas3 h1 {
+  margin-inline: 5vw;
+}
+.canvas3 #chart3 {
+  background: #e03e0a;
+}
+
+.preloader {
+  height: 100vh;
+  position: relative;
+}
+.preloader .loader {
+  background: url("../../assets/images/svg/preloader.svg") 50% 50% no-repeat #fff;
+  cursor: wait;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.preloader .loader h1 {
+  color: #0e0e0e;
+  font-size: 1.5rem;
+  width: 30%;
+  text-align: center;
+  margin-top: 20vh;
 }
 
 /*# sourceMappingURL=style.css.map */
