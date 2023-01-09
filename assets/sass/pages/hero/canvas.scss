@@ -54,14 +54,16 @@
 
 }
 
-.canvas3{
-    height: calc(100vh - 80px);
+.chart3{
+    height: auto;
+    padding: 5vw;
     background: #191919;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     h1{
-        margin-inline: 5vw;
+        margin: 5vh;
     }
     #chart3{
         background: $orange;

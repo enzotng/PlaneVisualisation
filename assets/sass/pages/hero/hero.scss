@@ -1,18 +1,18 @@
 .hero{
-    height: 100vh;
+    height: calc(100vh - 80px);
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: absolute;
     top: 0;
     h1{
         font-size: 2rem;
     }
     p{
-        width: 25vw;
+        width: 40%;
         padding: 20px;
         text-align: center;
+        font-size: 1rem;
     }
 }

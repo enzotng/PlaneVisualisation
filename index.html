@@ -23,47 +23,44 @@
     </header>
     <main>
 
-        <section class="preloader">
+        <!-- <section class="preloader">
             <div class="loader">
                 <h1>Veuillez patientez pendant le chargement de la page.</h1>
             </div>
-        </section>
+        </section> -->
 
         <section class="hero">
             <h1>PlaneVisualisation</h1>
             <p>Bienvenue sur PlaneVisualisation, veuillez sélectionner le graphique que vous souhaitez visualiser</p>
         </section>
 
-        <section data-aos="fade-in" class="canvas">
+        <section class="canvas">
             <h1>FlightStats in Real</h1>
             <!-- <svg></svg> -->
+            <section>
+                <label id="title">United States GDP</label>
+              </section>
         </section>
 
-        <section class="canvas2" data-aos="fade-zoom-in"
-        data-aos-easing="ease-in-back"
-        data-aos-delay="300"
-        data-aos-offset="0">
+        <section class="canvas2">
             <h1>FlightStats in Real 2</h1>
-            <div class="widget">
+            <!-- <div class="widget">
                 <div class="header">Site Visitors</div>
                 <div id="chart" class="chart-container"></div>
-            </div>
+            </div> -->
+            <canvas id="myChart" width="100vw" height="35vh"></canvas>
         </section>
 
-        <section class="canvas">
-            <h1>Nombre de vols par heure</h1>
-            <div id="chart3"></div>
+        <section class="chart3">
+            <h1>Nombre de vols par continent</h1>
+            <canvas id="graphique3" width="100vw" height="35vh"></canvas>
         </section>
     </main>
     <footer></footer>
 </body>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.5.0/d3.min.js"></script>
-<script src="https://d3js.org/topojson.v1.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
-<script src="./assets/js/canvas2.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 <script src="./assets/js/main.js"></script>
 
 </html>

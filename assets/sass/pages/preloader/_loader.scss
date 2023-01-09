@@ -1,6 +1,6 @@
 .preloader {
     height: 100vh;
-    position: relative;
+    position: absolute;
     .loader {
         background: url('../../assets/images/svg/preloader.svg') 50% 50% no-repeat #fff;
         cursor: wait;
@@ -9,7 +9,7 @@
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 9999;
+        z-index: 100;
         display: flex;
         justify-content: center;
         align-items: center;

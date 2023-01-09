@@ -148,7 +148,7 @@ body {
   font-family: "Montserrat";
   color: #fff;
   background-image: url("../../assets/images/png/pexels-marina-hinic-730778.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   font-size: 1rem;
 }
@@ -216,7 +216,7 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.18);
   width: 100%;
   position: sticky;
-  z-index: 9999;
+  z-index: 99;
   top: 0;
 }
 header nav {
@@ -254,22 +254,22 @@ header nav ul li a:hover {
 }
 
 .hero {
-  height: 100vh;
+  height: calc(100vh - 80px);
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: absolute;
   top: 0;
 }
 .hero h1 {
   font-size: 2rem;
 }
 .hero p {
-  width: 25vw;
+  width: 40%;
   padding: 20px;
   text-align: center;
+  font-size: 1rem;
 }
 
 .canvas {
@@ -322,23 +322,25 @@ header nav ul li a:hover {
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.5));
 }
 
-.canvas3 {
-  height: calc(100vh - 80px);
+.chart3 {
+  height: auto;
+  padding: 5vw;
   background: #191919;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-.canvas3 h1 {
-  margin-inline: 5vw;
+.chart3 h1 {
+  margin: 5vh;
 }
-.canvas3 #chart3 {
+.chart3 #chart3 {
   background: #e03e0a;
 }
 
 .preloader {
   height: 100vh;
-  position: relative;
+  position: absolute;
 }
 .preloader .loader {
   background: url("../../assets/images/svg/preloader.svg") 50% 50% no-repeat #fff;
@@ -348,7 +350,7 @@ header nav ul li a:hover {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
