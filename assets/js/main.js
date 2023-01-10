@@ -3,35 +3,35 @@ window.onload = function () {
   new Chart(document.getElementById("graphique3"), {
     type: "line",
     data: {
-      labels: [8, 1600, 1700, 1750, 1800, 1850, 1900, 1950, 1999, 2050],
+      labels: [6, 8, 10, 12, 14, 16, 18, 20, 22],
       datasets: [
         {
-          data: [86, 114, 106, 106, 107, 111, 133, 221, 783, 2478],
-          label: "Africa",
+          data: [86, 114, 106, 106, 107, 111, 133, 221, 783],
+          label: "Afrique",
           borderColor: "#3e95cd",
           fill: false,
         },
         {
-          data: [282, 350, 411, 502, 635, 809, 947, 1402, 3700, 5267],
-          label: "Asia",
+          data: [282, 350, 411, 502, 635, 809, 947, 1402, 3700],
+          label: "Asie",
           borderColor: "#8e5ea2",
           fill: false,
         },
         {
-          data: [168, 170, 178, 190, 203, 276, 408, 547, 675, 734],
+          data: [168, 170, 178, 190, 203, 276, 408, 547, 675],
           label: "Europe",
           borderColor: "#3cba9f",
           fill: false,
         },
         {
-          data: [40, 20, 10, 16, 24, 38, 74, 167, 508, 784],
-          label: "Latin America",
+          data: [40, 20, 10, 16, 24, 38, 74, 167, 508],
+          label: "Amérique Latine",
           borderColor: "#e8c3b9",
           fill: false,
         },
         {
-          data: [6, 3, 2, 2, 7, 26, 82, 172, 312, 433],
-          label: "North America",
+          data: [6, 3, 2, 2, 7, 26, 82, 172, 312],
+          label: "Amérique du Nord",
           borderColor: "#c45850",
           fill: false,
         },
@@ -42,6 +42,12 @@ window.onload = function () {
         display: false,
         text: "Nombre de vols par continent",
       },
+      labels: {
+        // This more specific font property overrides the global property
+        font: {
+            size: 30
+        }
+    }
     },
   });
 };
@@ -56,36 +62,20 @@ $(document).ready(function () {
     data: { sem: 1 },
     dataType: "json",
     success: function (res) {
-      //Remarque : le data de res.data, c'est parce que le premier
-      //champ du jeu de rÃ©sultat s'appelle data. C'est dedans que tout se trouve.
-      const salary = res.data.map((amount) => amount.employee_salary);
-      const fullname = res.data.map((name) => name.employee_name);
-      const ages = res.data.map((name) => name.employee_age);
-
-      // On crÃ©Ã© un vecteur de valeurs en comptant le nombre
-      // d'occurrences de certains item : en l'occurrence
-      // On regarde combien d'employÃ©s ont un Ã¢ge donnÃ©e.
-      // Ca marche aussi quand l'indice est une chaÃ®ne de
-      //caractÃ¨res
-      const compte = {};
-      const lesages = [];
-      for (const age of ages) {
-        if (compte[age]) compte[age]++;
-        else {
-          lesages.push(age);
-          compte[age] = 1;
-        }
-      }
+      const iataCode = res.data.aircraft.regNumber.map((iataCode) => iataCode.regNumber);
+      const arrival = res.data.arrival.icaoCode.map((arrival) => arrival.icaoCode);
+      const departure = res.data.departure.icaoCode.map((departure) => departure.icaoCode);
+      const flightNumber = res.data.flight.icaoNumber.map((flightNumber) => flightNumber.icaoNumber);
 
       console.log(Object.values(compte));
-      c = new Chart("salaires", {
+      c = new Chart(document.getElementById("graphique2"), {
         type: "bar",
         data: {
           labels: fullname,
           datasets: [
             {
               label: "salaire annuel",
-              data: salary,
+              data: iataCode,
             },
           ],
         },

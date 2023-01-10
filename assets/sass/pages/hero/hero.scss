@@ -8,6 +8,9 @@
     top: 0;
     h1{
         font-size: 2rem;
+        background-color: $blanc;
+        padding: 0.5rem 1rem;
+        mix-blend-mode: screen;
     }
     p{
         width: 40%;

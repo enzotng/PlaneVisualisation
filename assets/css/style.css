@@ -146,7 +146,6 @@ h1 {
 
 body {
   font-family: "Montserrat";
-  color: #fff;
   background-image: url("../../assets/images/png/pexels-marina-hinic-730778.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -264,6 +263,9 @@ header nav ul li a:hover {
 }
 .hero h1 {
   font-size: 2rem;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  mix-blend-mode: screen;
 }
 .hero p {
   width: 40%;
@@ -298,14 +300,14 @@ header nav ul li a:hover {
   margin: 0 auto;
   width: 350px;
   margin-top: 50px;
-  background-color: #222D3A;
+  background-color: #222d3a;
   border-radius: 5px;
   box-shadow: 0px 0px 1px 0px #06060d;
 }
 .canvas2 .header {
-  background-color: #29384D;
+  background-color: #29384d;
   height: 40px;
-  color: #929DAF;
+  color: #929daf;
   text-align: center;
   line-height: 40px;
   border-top-left-radius: 7px;
@@ -325,17 +327,57 @@ header nav ul li a:hover {
 .chart3 {
   height: auto;
   padding: 5vw;
-  background: #191919;
+  background: #bdc3c7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 }
-.chart3 h1 {
-  margin: 5vh;
+.chart3 .header_chart {
+  display: flex;
+  flex-direction: column;
 }
-.chart3 #chart3 {
-  background: #e03e0a;
+.chart3 .header_chart .header_colonne_gauche {
+  flex: 50%;
+}
+.chart3 .header_chart .header_colonne_gauche h1 {
+  background: #fff;
+  padding: 0.5rem 1rem;
+  mix-blend-mode: screen;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bolds;
+}
+.chart3 .header_chart .header_colonne_droite {
+  flex: 50%;
+}
+.chart3 .header_chart .header_colonne_droite label {
+  color: #fff;
+  font-weight: bold;
+  display: none;
+}
+.chart3 .header_chart .header_colonne_droite select {
+  border-radius: 5px;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-block: 2vh;
+  font-family: "Montserrat";
+  text-align: center;
+}
+.chart3 p {
+  margin-top: 5vw;
+  color: #0e0e0e;
+  background: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-align: justify;
+}
+.chart3 #graphique3 {
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
 }
 
 .preloader {
