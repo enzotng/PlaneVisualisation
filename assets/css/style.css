@@ -234,6 +234,38 @@ header span i {
     align-items: center;
   }
 }
+footer {
+  height: auto;
+  display: flex;
+  padding: 2vw;
+  justify-content: center;
+  align-items: center;
+  background: #07062c;
+  flex-direction: column;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+footer ul li {
+  padding: 20px;
+}
+footer ul li a {
+  color: #e9e8fc;
+}
+footer ul li a i {
+  font-size: 1.5rem;
+  transition: all 0.3s;
+}
+footer ul li a i:hover {
+  transform: scale(1.1);
+  color: #00091f;
+}
+footer p {
+  text-align: center;
+}
+
 .hero {
   height: calc(110vh - 80px);
   display: flex;
@@ -322,7 +354,7 @@ header span i {
 .canvas1 .right {
   width: 50%;
 }
-.canvas1 #graphique2 {
+.canvas1 #graphique1 {
   background-color: #e9e8fc;
   padding: 1rem;
   border-radius: 10px;
@@ -338,7 +370,7 @@ header span i {
   .canvas1 .canvas1 p {
     text-align: center;
   }
-  .canvas1 #graphique2 {
+  .canvas1 #graphique1 {
     margin-block: 5vh;
     width: 100%;
   }
@@ -449,6 +481,60 @@ header span i {
   background-color: #e9e8fc;
   padding: 0.5rem 1rem;
   border-radius: 5px;
+}
+
+.wikiplane {
+  min-height: 100vh;
+  background: #00091f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.wikiplane h1 {
+  text-shadow: #e9e8fc 0px 0px 15px;
+}
+.wikiplane p {
+  width: 50%;
+  margin-block: 3vh;
+  line-height: 2;
+  text-align: center;
+}
+.wikiplane form {
+  background: #e9e8fc;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 50vw;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 5px;
+}
+.wikiplane form select {
+  font-family: "Gathero";
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 1.125rem;
+  border: none;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+}
+.wikiplane form input[type=submit] {
+  font-family: "Gathero";
+  font-size: 1.125rem;
+  background: #ffffff;
+  margin-block: 20px;
+  border: none;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.wikiplane form input[type=submit]:hover {
+  background: #00091f;
+  color: #e9e8fc;
 }
 
 .preloader {

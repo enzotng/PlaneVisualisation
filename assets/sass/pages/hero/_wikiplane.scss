@@ -1,0 +1,53 @@
+.wikiplane{
+    min-height: 100vh;
+    background: $background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1{
+        text-shadow: $blanc 0px 0px 15px;
+    }
+    p{
+        width: 50%;
+        margin-block: 3vh;
+        line-height: 2;
+        text-align: center;
+    }
+    form{
+        background: $blanc;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        width: 50vw;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 5px;
+        select{
+            font-family: $font-titre;
+            background: $blanc-clair;
+            cursor: pointer;
+            font-size: 1.125rem;
+            border: none;
+            padding: 20px;
+            border-radius: 5px;
+            width: 100%;
+        }
+        input[type="submit"]{
+            font-family: $font-titre;
+            font-size: 1.125rem;
+            background: $blanc-clair;
+            margin-block: 20px;
+            border: none;
+            padding: 20px;
+            border-radius: 5px;
+            width: 100%;
+            transition: all 0.3s;
+            cursor: pointer;
+            &:hover{
+                background: $background;
+                color: $blanc;
+            }
+        }
+    }
+}

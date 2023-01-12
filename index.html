@@ -16,9 +16,9 @@
     </header>
     <main>
 
-        <div class="preloader">
+        <!-- <div class="preloader">
             <span class="loader"></span>
-        </div>
+        </div> -->
 
         <section id="hero" class="hero">
             <h1>Plane Visualisation</h1>
@@ -66,11 +66,11 @@
                         is in Roissy-en-France, 23 km (14 mi) northeast of Paris and is named after statesman Charles de
                         Gaulle
                         (1890-1970), whose initials (CDG) is used as its IATA airport code.</p>
-        
+
                     <a href="#canvas2" class="lien">View other charts</a>
                 </div>
                 <div class="column right">
-                    <canvas id="graphique2"></canvas>
+                    <canvas id="graphique1"></canvas>
                 </div>
             </div>
         </section>
@@ -120,14 +120,49 @@
                 quotidiens (-1% par rapport à la semaine précédente).
             </p>
         </section>
+
+        <section id="wikiplane" class="wikiplane">
+            <h1>WikiPlane</h1>
+            <p>The Wright brothers flights in 1903 are recognized by the Fédération Aéronautique Internationale (FAI),
+                the standard setting and record-keeping body for aeronautics, as "the first sustained and controlled
+                heavier-than-air powered flight". By 1905, the Wright Flyer III was capable of fully controllable,
+                stable flight for substantial periods. The Wright brothers credited Otto Lilienthal as a major
+                inspiration for their decision to pursue manned flight.</p>
+            <form name="form1" id="form1" action="/action_page.php">
+                <label>Compagnie aérienne :</label>
+                <select name="subject" id="subject">
+                    <option value="" selected="selected">Sélectionner une compagnie aérienne</option>
+                </select>
+
+                <label>Modèle :</label>
+                <select name="topic" id="topic">
+                    <option value="" selected="selected">Sélectionner un modèle</option>
+                </select>
+
+                <input type="submit" value="Rechercher...">
+            </form>
+        </section>
+
     </main>
-    <footer></footer>
+    <footer>
+        <ul>
+            <li><a href=""><i class="bi bi-github"></i></a></li>
+            <li><a href=""><i class="bi bi-linkedin"></i></a></li>
+            <li><a href=""><i class="bi bi-globe"></i></a></li>
+        </ul>
+        <p>Copyright ©
+            <script>document.write(new Date().getFullYear())</script> Enzo Tang. All Rights Reserved.
+        </p>
+    </footer>
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
     integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+    integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="./assets/js/main.js"></script>
 
 </html>

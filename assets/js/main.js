@@ -17,55 +17,54 @@ window.onload = function () {
   responsiveCanvas(x); // Call listener function at run time
   x.addListener(responsiveCanvas); // Attach listener function on state changes
 
-  const indicators = document.querySelectorAll(".indicator");
-const sections = document.querySelectorAll("section");
+  //   const indicators = document.querySelectorAll(".indicator");
+  // const sections = document.querySelectorAll("section");
 
-const resetCurrentActiveIndicator = () => {
-  const activeIndicator = document.querySelector(".active");
-  activeIndicator.classList.remove("active");
-};
+  // const resetCurrentActiveIndicator = () => {
+  //   const activeIndicator = document.querySelector(".active");
+  //   activeIndicator.classList.remove("active");
+  // };
 
-const onSectionLeavesViewport = (section) => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          resetCurrentActiveIndicator();
-          const element = entry.target;
-          const indicator = document.querySelector(`a[href='#${element.id}']`);
-          indicator.classList.add("active");
-          return;
-        }
-      });
-    },
-    {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.75
-    }
-  );
-  observer.observe(section);
-};
+  // const onSectionLeavesViewport = (section) => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           resetCurrentActiveIndicator();
+  //           const element = entry.target;
+  //           const indicator = document.querySelector(`a[href='#${element.id}']`);
+  //           indicator.classList.add("active");
+  //           return;
+  //         }
+  //       });
+  //     },
+  //     {
+  //       root: null,
+  //       rootMargin: "0px",
+  //       threshold: 0.75
+  //     }
+  //   );
+  //   observer.observe(section);
+  // };
 
-indicators.forEach((indicator) => {
-  indicator.addEventListener("click", function (event) {
-    event.preventDefault();
-    document
-      .querySelector(this.getAttribute("href"))
-      .scrollIntoView({ behavior: "smooth" });
-    resetCurrentActiveIndicator();
-    this.classList.add("active");
-  });
-});
+  // indicators.forEach((indicator) => {
+  //   indicator.addEventListener("click", function (event) {
+  //     event.preventDefault();
+  //     document
+  //       .querySelector(this.getAttribute("href"))
+  //       .scrollIntoView({ behavior: "smooth" });
+  //     resetCurrentActiveIndicator();
+  //     this.classList.add("active");
+  //   });
+  // });
 
-sections.forEach(onSectionLeavesViewport);
-
+  // sections.forEach(onSectionLeavesViewport);
 
   getData();
 
   async function getData() {
     const requete = await fetch(
-      "https://airlabs.co/api/v9/schedules?api_key=3ad9a21f-89ba-4fdb-85d8-3fb7767bf5a8&dep_iata=LAX"
+      // "https://airlabs.co/api/v9/routes?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034&dep_iata=CDG"
     );
     console.log(requete);
     const response = await requete.json();
@@ -76,13 +75,13 @@ sections.forEach(onSectionLeavesViewport);
     labels = [];
     values = [];
     console.log(labels);
-    for (i = 0; i < 10; i++) {
+    for (i = 0; i < 50; i++) {
       labels.push(response.response[i].aircraft_icao);
       values.push(response.response[i].duration);
     }
 
-    new Chart(document.getElementById("graphique2"), {
-      type: "line",
+    new Chart(document.getElementById("graphique1"), {
+      type: "radar",
       data: {
         labels: labels,
         datasets: [
@@ -108,27 +107,11 @@ sections.forEach(onSectionLeavesViewport);
       options: {
         responsive: true,
         legend: { display: false },
-        scales: {
-          yAxes: [
-            {
-              ticks: {
-                fontSize: 20,
-              },
-            },
-          ],
-          xAxes: [
-            {
-              ticks: {
-                fontSize: 20,
-              },
-            },
-          ],
-        },
       },
     });
 
     const requete2 = await fetch(
-      "https://airlabs.co/api/v9/schedules?api_key=3ad9a21f-89ba-4fdb-85d8-3fb7767bf5a8&dep_iata=LAX"
+      // "https://airlabs.co/api/v9/routes?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034&arr_iata=CDG"
     );
     console.log(requete2);
     const response2 = await requete2.json();
@@ -139,18 +122,19 @@ sections.forEach(onSectionLeavesViewport);
     labels = [];
     values = [];
     console.log(labels);
-    for (i = 0; i < 10; i++) {
-      labels.push(response2.response[i].aircraft_icao);
-      values.push(response2.response[i].duration);
+    for (i = 0; i < 50; i++) {
+      labels.push(response2.response[i].flight_iata);
+      values.push(response2.response[i].counter);
     }
 
+    Chart.defaults.font.size = 18;
     new Chart(document.getElementById("graphique2"), {
-      type: "bar-chart",
+      type: "bar",
       data: {
         labels: labels,
         datasets: [
           {
-            label: "Vols",
+            label: "Vols par semaine",
             backgroundColor: [
               "#3e95cd",
               "#8e5ea2",
@@ -170,22 +154,10 @@ sections.forEach(onSectionLeavesViewport);
       },
       options: {
         responsive: true,
-        legend: { display: false },
-        scales: {
-          yAxes: [
-            {
-              ticks: {
-                fontSize: 20,
-              },
-            },
-          ],
-          xAxes: [
-            {
-              ticks: {
-                fontSize: 20,
-              },
-            },
-          ],
+        plugins: {
+          legend: {
+            display: false,
+          },
         },
       },
     });
@@ -197,4 +169,21 @@ $(window).on("load", function () {
   setTimeout(function () {
     $("body").css("overflow", "visible");
   }, 1500);
+});
+
+// WikiPlane Dropdown
+
+$select = $('#localeId'); 
+$.ajax({
+    url: '../assets/json/languages.json',
+    dataType:'JSON',
+    success:function(data){
+        $select.html('');
+        $.each(data.languages, function (key, val) {
+            $select.append('<option id="' + val.id + '">' + val.name + '</option>');
+        })
+    },
+    error:function(){
+        $select.html('<option id="-1">none available</option>');
+    }
 });
