@@ -64,7 +64,7 @@ window.onload = function () {
 
   async function getData() {
     const requete = await fetch(
-      // "https://airlabs.co/api/v9/routes?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034&dep_iata=CDG"
+      "https://airlabs.co/api/v9/routes?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034&dep_iata=CDG"
     );
     console.log(requete);
     const response = await requete.json();
@@ -111,7 +111,7 @@ window.onload = function () {
     });
 
     const requete2 = await fetch(
-      // "https://airlabs.co/api/v9/routes?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034&arr_iata=CDG"
+      "https://airlabs.co/api/v9/routes?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034&arr_iata=CDG"
     );
     console.log(requete2);
     const response2 = await requete2.json();

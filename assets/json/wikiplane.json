@@ -1,29 +1,29 @@
-"languages": [
+[
     {
-        "name": "English",
-        "id": 1,
-        "selected": false,
+        "name": "Air France",
+        "constructeur": "Boeing",
+        "modele": "777W",
         "description": "English",
         "imageSrc": "assets/img/flags-icons/en-flag.png"
     },
     {
         "name": "Postegues",
-        "id": 2,
-        "selected": false,
+        "constructeur": "Airbus",
+        "modele": "A350-900",
         "description": "Postegues",
         "imageSrc": "assets/img/flags-icons/pt-flag.png"
     },
     {
         "name": "Russian",
-        "id": 3,
-        "selected": false,
+        "constructeur": "Airbus",
+        "modele": "A320",
         "description": "Russian",
         "imageSrc": "assets/img/flags-icons/ru-flag.png"
     },
     {
         "name": "Spanish",
-        "id": 4,
-        "selected": false,
+        "constructeur": "Airbus",
+        "modele": "A330-200",
         "description": "Spanish",
         "imageSrc": "assets/img/flags-icons/es-flag.png"
     }
