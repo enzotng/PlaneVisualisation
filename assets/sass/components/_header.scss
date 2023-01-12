@@ -1,44 +1,14 @@
 header {
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    width: 100%;
-    position: sticky;
-    z-index: 99;
-    top: 0;
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-        height: 80px;
-        padding: 20px;
-        img {
-            width: 4vw;
-        }
-        ul {
-            display: flex;
-            justify-content: center;
-            flex-direction: row;
-            align-items: center;
-            i {
-                color: $blanc;
-                padding-inline-start: 10px;
-            }
-            li {
-                padding: 10px;
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                a {
-                    color: $blanc;
-                    &:hover {
-                        color: $background;
-                    }
-                }
-            }
+    height: 80px;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    span{
+        color: $blanc;
+        i{
+            color: red;
+            padding-inline: 5px;
         }
     }
 }

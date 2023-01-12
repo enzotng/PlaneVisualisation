@@ -3,7 +3,6 @@
    License: none (public domain)
 */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 html,
 body,
 div,
@@ -135,8 +134,19 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: "Gathero";
+  src: url("../fonts/Gathero-x3A70.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 h1 {
-  font-size: clamp(19px, 32px, 4.1666666667vw);
+  font-size: clamp(1.5rem, -0.1667rem + 8.3333vw, 5rem);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
 }
 
 * {
@@ -145,177 +155,230 @@ h1 {
 }
 
 body {
-  font-family: "Montserrat";
-  background-image: url("../../assets/images/png/pexels-marina-hinic-730778.jpg");
+  font-family: "Gathero";
+  font-size: 1.125rem;
+  background: url("../images/svg/background.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  font-size: 1rem;
+  color: #e9e8fc;
+  overflow: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
+::-webkit-scrollbar {
+  display: none;
 }
 
 a {
   text-decoration: none;
-  color: #0e0e0e;
+  color: #00091f;
   transition: color 0.3s;
 }
 a:hover {
   color: #f2f3f4;
 }
 
-::-webkit-scrollbar {
-  width: 9px;
-  height: 9px;
+aside {
+  right: 50px;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-::-webkit-scrollbar-button {
-  width: 0px;
-  height: 0px;
+aside ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #fff;
-  border: 0px none #ffffff;
-  border-radius: 50px;
+aside ul li .indicator {
+  cursor: pointer;
+  margin-top: 1rem;
+  display: block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: white;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #ffffff;
-}
-
-::-webkit-scrollbar-thumb:active {
-  background: #000000;
-}
-
-::-webkit-scrollbar-track {
-  background: #666666;
-  border: 0px none #ffffff;
-  border-radius: 100px;
-}
-
-::-webkit-scrollbar-track:hover {
-  background: #666666;
-}
-
-::-webkit-scrollbar-track:active {
-  background: #333333;
-}
-
-::-webkit-scrollbar-corner {
-  background: transparent;
+aside ul li .active {
+  transform: scale(1.7);
+  transition: transform 200ms ease-in-out;
 }
 
 header {
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  width: 100%;
-  position: sticky;
-  z-index: 99;
-  top: 0;
-}
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
   height: 80px;
   padding: 20px;
-}
-header nav img {
-  width: 4vw;
-}
-header nav ul {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-}
-header nav ul i {
-  color: #fff;
-  padding-inline-start: 10px;
-}
-header nav ul li {
-  padding: 10px;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: stretch;
 }
-header nav ul li a {
-  color: #fff;
+header span {
+  color: #e9e8fc;
 }
-header nav ul li a:hover {
-  color: #0e0e0e;
+header span i {
+  color: red;
+  padding-inline: 5px;
 }
 
 .hero {
   height: calc(100vh - 80px);
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  top: 0;
+  position: relative;
 }
 .hero h1 {
-  font-size: 2rem;
-  background-color: #fff;
-  padding: 0.5rem 1rem;
-  mix-blend-mode: screen;
+  color: #e9e8fc;
+  text-transform: uppercase;
+  text-shadow: #e9e8fc 0px 0px 15px;
 }
-.hero p {
-  width: 40%;
-  padding: 20px;
-  text-align: center;
-  font-size: 1rem;
+.hero .scroll-down {
+  position: absolute;
+  bottom: 50px;
+  transform: translate(-50%, -50%);
+}
+.hero .scroll-down span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid #e9e8fc;
+  border-right: 2px solid #e9e8fc;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: scrollAnimation 2s infinite;
+}
+.hero .scroll-down span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.hero .scroll-down span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@keyframes scrollAnimation {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
 }
 
-.canvas {
-  height: calc(100vh - 80px);
-  background: #191919;
+.canvas1 {
+  height: 100vh;
+  background: #00091f;
   display: flex;
+  padding: 4vw 5vw;
   justify-content: center;
   align-items: center;
 }
-.canvas h1 {
-  margin-inline: 5vw;
+.canvas1 p {
+  margin-block: 3vh;
+  padding-right: 5vw;
+  line-height: 2;
+}
+.canvas1 .column {
+  float: left;
+}
+.canvas1 .left {
+  width: 50%;
+}
+.canvas1 .left .lien {
+  color: #00091f;
+  background: #e9e8fc;
+  padding: 10px;
+  transition: all 0.5s;
+}
+.canvas1 .left .lien:hover {
+  background: #00091f;
+  color: #e9e8fc;
+  transform: scale(0.9);
+}
+.canvas1 .right {
+  width: 50%;
+}
+.canvas1 #graphique2 {
+  background-color: #e9e8fc;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 100%;
+}
+@media screen and (max-width: 1192px) {
+  .canvas1 .column {
+    width: 100%;
+  }
+  .canvas1 .canvas1 p {
+    text-align: center;
+  }
+  .canvas1 #graphique2 {
+    margin-block: 5vh;
+    width: 100%;
+  }
 }
 
 .canvas2 {
-  height: calc(100vh - 80px);
+  height: 100vh;
   background: #07062c;
   display: flex;
+  padding: 4vw 5vw;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding: 5vw;
+  text-align: right;
 }
-.canvas2 h1 {
-  background: #fff;
-  padding: 0.5rem 1rem;
-  mix-blend-mode: screen;
-  border-radius: 5px;
-  text-transform: uppercase;
-  font-weight: bolds;
-  margin-block: 2vh;
+.canvas2 p {
+  padding-left: 5vw;
+  margin-block: 3vh;
+  line-height: 2;
+}
+.canvas2 .column {
+  float: left;
+}
+.canvas2 .left {
+  width: 50%;
+}
+.canvas2 .right {
+  width: 50%;
+}
+.canvas2 .right .lien {
+  color: #00091f;
+  background: #e9e8fc;
+  padding: 10px;
+  transition: all 0.5s;
+}
+.canvas2 .right .lien:hover {
+  background: #00091f;
+  color: #e9e8fc;
+  transform: scale(0.9);
 }
 .canvas2 #graphique2 {
-  background-color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  width: 50%;
+  background-color: #e9e8fc;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 100%;
+}
+@media screen and (max-width: 1192px) {
+  .canvas2 .column {
+    width: 100%;
+  }
+  .canvas2 #graphique2 {
+    background-color: #e9e8fc;
+    padding: 1rem;
+    width: 100%;
+  }
 }
 
 .chart3 {
-  height: auto;
+  height: 100vh;
   padding: 5vw;
-  background: #bdc3c7; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #bdc3c7;
+  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+  background: linear-gradient(to right, #2c3e50, #bdc3c7);
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -329,7 +392,7 @@ header nav ul li a:hover {
   flex: 50%;
 }
 .chart3 .header_chart .header_colonne_gauche h1 {
-  background: #fff;
+  background: #e9e8fc;
   padding: 0.5rem 1rem;
   mix-blend-mode: screen;
   border-radius: 5px;
@@ -340,7 +403,7 @@ header nav ul li a:hover {
   flex: 50%;
 }
 .chart3 .header_chart .header_colonne_droite label {
-  color: #fff;
+  color: #e9e8fc;
   font-weight: bold;
   display: none;
 }
@@ -349,19 +412,19 @@ header nav ul li a:hover {
   border: none;
   padding: 0.5rem 1rem;
   margin-block: 2vh;
-  font-family: "Montserrat";
+  font-family: "Gathero";
   text-align: center;
 }
 .chart3 p {
   margin-top: 5vw;
-  color: #0e0e0e;
-  background: #fff;
+  color: #00091f;
+  background: #e9e8fc;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   text-align: justify;
 }
 .chart3 #graphique3 {
-  background-color: #fff;
+  background-color: #e9e8fc;
   padding: 0.5rem 1rem;
   border-radius: 5px;
 }
@@ -371,8 +434,7 @@ header nav ul li a:hover {
   position: absolute;
 }
 .preloader .loader {
-  background: url("../../assets/images/svg/preloader.svg") 50% 50% no-repeat #fff;
-  cursor: wait;
+  background: url("../../assets/images/svg/loader.svg") 50% 50% no-repeat #00091f;
   height: 100%;
   left: 0;
   position: fixed;
@@ -384,7 +446,6 @@ header nav ul li a:hover {
   align-items: center;
 }
 .preloader .loader h1 {
-  color: #0e0e0e;
   font-size: 1.5rem;
   width: 30%;
   text-align: center;

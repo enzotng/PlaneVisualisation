@@ -12,42 +12,87 @@
 
 <body>
     <header>
-        <nav>
-            <img src="./assets/images/ico/Martz90-Circle-Addon2-Plane-flight.ico" alt="Logo Avion">
-            <ul>
-                <li><a href="">Home</a><i class="bi bi-airplane-fill"></i></li>
-                <li><a href="">Charts</a><i class="bi bi-bar-chart-fill"></i></li>
-                <li><a href="">Contact</a><i class="bi bi-envelope-fill"></i></li>
-            </ul>
-        </nav>
+        <span>Made with <i class="bi bi-heart-fill"></i> by Enzo Tang</span>
     </header>
     <main>
 
-        <!-- <section class="preloader">
-            <div class="loader">
-                <h1>Veuillez patientez pendant le chargement de la page.</h1>
+        <div class="preloader">
+            <span class="loader"></span>
+        </div>
+
+        <section id="hero" class="hero">
+            <h1>Plane Visualisation</h1>
+            <div class="scroll-down">
+                <a href="#canvas1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
             </div>
-        </section> -->
-
-        <section class="hero">
-            <h1>PlaneVisualisation</h1>
-            <p>Bienvenue sur PlaneVisualisation, veuillez sélectionner le graphique que vous souhaitez visualiser</p>
         </section>
 
-        <section class="canvas">
-            <h1>FlightStats in Real</h1>
-            <!-- <svg></svg> -->
-            <section>
-                <label id="title">United States GDP</label>
-            </section>
+        <aside>
+            <ul>
+                <li>
+                    <a class="indicator active" href="#hero"></a>
+                </li>
+                <li>
+                    <a class="indicator" href="#canvas1"></a>
+                </li>
+                <li>
+                    <a class="indicator" href="#canvas2"></a>
+                </li>
+                <li>
+                    <a class="indicator" href="#canvas3"></a>
+                </li>
+            </ul>
+        </aside>
+
+        <section id="canvas1" class="canvas1">
+            <div class="row">
+                <div class="column left">
+                    <h1>Departure flights from CDG</h1>
+                    <p>Paris Charles de Gaulle Airport (French: Aéroport de Paris-Charles-de-Gaulle, IATA: CDG, ICAO:
+                        LFPG),
+                        also known as Roissy Airport or simply Paris CDG, is the principal airport serving the French
+                        capital,
+                        Paris (and its metropolitan area), and the largest international airport in France. Opened in
+                        1974, it
+                        is in Roissy-en-France, 23 km (14 mi) northeast of Paris and is named after statesman Charles de
+                        Gaulle
+                        (1890-1970), whose initials (CDG) is used as its IATA airport code.</p>
+
+                    <a href="#canvas2" class="lien">View other charts</a>
+                </div>
+                <div class="column right">
+                    <canvas id="graphique2"></canvas>
+                </div>
+            </div>
         </section>
 
-        <section class="canvas2">
-            <h1>Nombre d'avions par compagnie aérienne</h1>
-            <canvas id="graphique2" width="100vw" height="35vh"></canvas>
+        <section id="canvas2" class="canvas2">
+            <div class="row">
+                <div class="column left">
+                    <canvas id="graphique2"></canvas>
+                </div>
+                <div class="column right">
+                    <h1>Arrival flights from CDG</h1>
+                    <p>Paris Charles de Gaulle Airport (French: Aéroport de Paris-Charles-de-Gaulle, IATA: CDG, ICAO:
+                        LFPG),
+                        also known as Roissy Airport or simply Paris CDG, is the principal airport serving the French
+                        capital,
+                        Paris (and its metropolitan area), and the largest international airport in France. Opened in
+                        1974, it
+                        is in Roissy-en-France, 23 km (14 mi) northeast of Paris and is named after statesman Charles de
+                        Gaulle
+                        (1890-1970), whose initials (CDG) is used as its IATA airport code.</p>
+
+                    <a href="#canvas3" class="lien">View other charts</a>
+                </div>
+            </div>
         </section>
 
-        <section class="chart3">
+        <section id="canvas3" class="chart3">
             <div class="header_chart">
                 <div class="header_colonne_gauche">
                     <h1>Nombre de vols par continent</h1>
@@ -62,13 +107,13 @@
                     </select>
                 </div>
             </div>
-                <canvas id="canvas" width="100vw" height="35vh"></canvas>
-                <p>
-                    Le reste du top 20 d'Eurocontrol la semaine dernière plaçait Wizz Air, KLM Group, British Airways
-                    Group, Vueling et Eurowings devant SAS Scandinavian, Pegasus Airlines, SWISS, Iberia, Norwegian, TAP
-                    Air Portugal, TUI Group, Wideroe, Finnair et ITA Airways, cette dernière opérant en moyenne 237 vols
-                    quotidiens (-1% par rapport à la semaine précédente).
-                </p>
+            <canvas id="canvas" width="100vw" height="35vh"></canvas>
+            <p>
+                Le reste du top 20 d'Eurocontrol la semaine dernière plaçait Wizz Air, KLM Group, British Airways
+                Group, Vueling et Eurowings devant SAS Scandinavian, Pegasus Airlines, SWISS, Iberia, Norwegian, TAP
+                Air Portugal, TUI Group, Wideroe, Finnair et ITA Airways, cette dernière opérant en moyenne 237 vols
+                quotidiens (-1% par rapport à la semaine précédente).
+            </p>
         </section>
     </main>
     <footer></footer>

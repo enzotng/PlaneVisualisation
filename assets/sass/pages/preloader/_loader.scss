@@ -2,8 +2,7 @@
     height: 100vh;
     position: absolute;
     .loader {
-        background: url('../../assets/images/svg/preloader.svg') 50% 50% no-repeat #fff;
-        cursor: wait;
+        background: url('../../assets/images/svg/loader.svg') 50% 50% no-repeat $background;
         height: 100%;
         left: 0;
         position: fixed;
@@ -14,7 +13,6 @@
         justify-content: center;
         align-items: center;
         h1 {
-            color: $background;
             font-size: 1.5rem;
             width: 30%;
             text-align: center;

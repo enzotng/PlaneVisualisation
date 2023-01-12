@@ -1,61 +1,57 @@
-*{
+* {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
-body{
+body {
   font-family: $font-titre;
-  // color: $blanc;
-  background-image: url('../../assets/images/png/pexels-marina-hinic-730778.jpg');
+  font-size: 1.125rem;
+  background: url("../images/svg/background.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  font-size: 1rem;
+  color: $blanc;
+  overflow: hidden;
 }
 
-h1, h2, h3, h4, h5, h6{
-  font-weight: bold;
-}
+::-webkit-scrollbar {
+  display: none;
+  }
 
-a{
+a {
   text-decoration: none;
   color: $background;
   transition: color 0.3s;
-  &:hover{
+  &:hover {
     color: #f2f3f4;
   }
 }
 
-::-webkit-scrollbar {
-  width: 9px;
-  height: 9px;
-}
-::-webkit-scrollbar-button {
-  width: 0px;
-  height: 0px;
-}
-::-webkit-scrollbar-thumb {
-  background: #fff;
-  border: 0px none #ffffff;
-  border-radius: 50px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #ffffff;
-}
-::-webkit-scrollbar-thumb:active {
-  background: #000000;
-}
-::-webkit-scrollbar-track {
-  background: #666666;
-  border: 0px none #ffffff;
-  border-radius: 100px;
-}
-::-webkit-scrollbar-track:hover {
-  background: #666666;
-}
-::-webkit-scrollbar-track:active {
-  background: #333333;
-}
-::-webkit-scrollbar-corner {
-  background: transparent;
+aside {
+  right: 50px;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
+aside ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+}
+
+aside ul li .indicator {
+  cursor: pointer;
+  margin-top: 1rem;
+  display: block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+aside ul li .active {
+  transform: scale(1.7);
+  transition: transform 200ms ease-in-out;
+}
