@@ -1,10 +1,16 @@
 .canvas1 {
     height: 100vh;
-    background: $background;
+    background: $bleu-fonce;
     display: flex;
     padding: 4vw 5vw;
     justify-content: center;
     align-items: center;
+    position: relative;
+    .svg_transition{
+        top: -35vh;
+        position: absolute;
+        width: 100%;
+    }
     p {
         margin-block: 3vh;
         padding-right: 5vw;
@@ -45,6 +51,10 @@
             width: 100%;
         }
 
+        .svg_transition{
+            display: none;
+        }
+
         .canvas1 {
             p {
                 text-align: center;
@@ -60,7 +70,7 @@
 
 .canvas2 {
     height: 100vh;
-    background: $bleu-fonce;
+    background: $background;
     display: flex;
     padding: 4vw 5vw;
     justify-content: center;

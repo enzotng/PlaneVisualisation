@@ -1,5 +1,5 @@
 .hero {
-    height: calc(100vh - 80px);
+    height: calc(110vh - 80px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,11 +9,12 @@
         color: $blanc;
         text-transform: uppercase;
         text-shadow: $blanc 0px 0px 15px;
+        margin-bottom: 15vh;
     }
 
     .scroll-down {
         position: absolute;
-        bottom: 50px;
+        bottom: 15vh;
         transform: translate(-50%, -50%);
         span {
             &:nth-child(2) {

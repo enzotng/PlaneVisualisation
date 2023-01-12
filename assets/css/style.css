@@ -182,6 +182,7 @@ aside {
   position: fixed;
   top: 50%;
   transform: translate(-50%, -50%);
+  z-index: 99;
 }
 
 aside ul {
@@ -207,6 +208,11 @@ aside ul li .active {
   transition: transform 200ms ease-in-out;
 }
 
+@media screen and (max-width: 1192px) {
+  aside {
+    display: none;
+  }
+}
 header {
   height: 80px;
   padding: 20px;
@@ -222,8 +228,14 @@ header span i {
   padding-inline: 5px;
 }
 
+@media screen and (max-width: 1192px) {
+  header {
+    justify-content: center;
+    align-items: center;
+  }
+}
 .hero {
-  height: calc(100vh - 80px);
+  height: calc(110vh - 80px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -234,10 +246,11 @@ header span i {
   color: #e9e8fc;
   text-transform: uppercase;
   text-shadow: #e9e8fc 0px 0px 15px;
+  margin-bottom: 15vh;
 }
 .hero .scroll-down {
   position: absolute;
-  bottom: 50px;
+  bottom: 15vh;
   transform: translate(-50%, -50%);
 }
 .hero .scroll-down span {
@@ -272,11 +285,17 @@ header span i {
 
 .canvas1 {
   height: 100vh;
-  background: #00091f;
+  background: #07062c;
   display: flex;
   padding: 4vw 5vw;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.canvas1 .svg_transition {
+  top: -35vh;
+  position: absolute;
+  width: 100%;
 }
 .canvas1 p {
   margin-block: 3vh;
@@ -313,6 +332,9 @@ header span i {
   .canvas1 .column {
     width: 100%;
   }
+  .canvas1 .svg_transition {
+    display: none;
+  }
   .canvas1 .canvas1 p {
     text-align: center;
   }
@@ -324,7 +346,7 @@ header span i {
 
 .canvas2 {
   height: 100vh;
-  background: #07062c;
+  background: #00091f;
   display: flex;
   padding: 4vw 5vw;
   justify-content: center;
