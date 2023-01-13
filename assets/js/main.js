@@ -21,7 +21,7 @@ window.onload = function () {
 
   async function getData() {
     const requete = await fetch(
-      "https://airlabs.co/api/v9/routes?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034&dep_iata=CDG"
+      // "https://airlabs.co/api/v9/routes?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034&dep_iata=CDG"
     );
     console.log(requete);
     const response = await requete.json();
@@ -70,7 +70,7 @@ window.onload = function () {
     });
 
     const requete2 = await fetch(
-      "https://airlabs.co/api/v9/routes?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034&arr_iata=CDG"
+      // "https://airlabs.co/api/v9/routes?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034&arr_iata=CDG"
     );
     console.log(requete2);
     const response2 = await requete2.json();
@@ -122,6 +122,38 @@ window.onload = function () {
       },
     });
   }
+  
+  var map = L.map("graphique3").setView([0, 0], 2);
+
+  L.tileLayer(
+    "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+    {
+      attribution:
+        "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+    }
+  ).addTo(map);
+
+  var data = ".assets/airports.csv";
+  var lines = data.split("\n");
+  var markers = [];
+  for (var i = 1; i < lines.length; i++) {
+    var parts = lines[i].split(",");
+    if (i > 1) {
+      markers.push([parts[0], Number(parts[18]), Number(parts[19])]);
+    }
+  }
+  for (var i = 0; i < markers.length; i++) {
+    var lat = markers[i][1];
+    var lon = markers[i][2];
+    var popupText = markers[i][0];
+
+    var markerLocation = new L.LatLng(lat, lon);
+    var marker = new L.Marker(markerLocation);
+    map.addLayer(marker);
+
+    marker.bindPopup(popupText);
+  }
+
 };
 
 $(window).on("load", function () {

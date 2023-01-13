@@ -342,7 +342,7 @@ footer p {
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  background: rgba(0, 9, 31, 0.25);
+  background: #07062c;
   box-shadow: 0 8px 32px 0 rgba(0, 9, 31, 0.35);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);

@@ -3,3 +3,9 @@
 Header set Access-Control-Allow-Origin "*"
 Header set Access-Control-Allow-Methods "GET,PUT,POST,DELETE"
 Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+
+Options +MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
