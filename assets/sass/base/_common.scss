@@ -8,13 +8,41 @@ body {
   font-size: 1.125rem;
   background: url("../images/svg/background.svg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   color: $blanc;
   overflow: hidden;
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: $blanc-clair;
+  border: 0px none $blanc-clair;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: $blanc-clair;
+}
+::-webkit-scrollbar-thumb:active {
+  background: $bleu-fonce;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none $blanc-clair;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 a {
@@ -26,39 +54,14 @@ a {
   }
 }
 
-aside {
-  right: 50px;
-  position: fixed;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 99;
-}
-
-aside ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style-type: none;
-  margin: 0;
-}
-
-aside ul li .indicator {
-  cursor: pointer;
-  margin-top: 1rem;
-  display: block;
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  background-color: white;
-}
-
-aside ul li .active {
-  transform: scale(1.7);
-  transition: transform 200ms ease-in-out;
-}
-
-@media screen and (max-width: 1192px) {
-  aside {
-    display: none;
+.lien {
+  color: $background;
+  background: $blanc;
+  padding: 10px;
+  transition: all 0.5s;
+  &:hover {
+      background: $background;
+      color: $blanc;
+      transform: scale(0.9);
   }
 }

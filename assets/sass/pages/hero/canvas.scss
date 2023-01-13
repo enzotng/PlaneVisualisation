@@ -1,15 +1,12 @@
 .canvas1 {
-    height: 100vh;
-    background: $bleu-fonce;
+    min-height: 100vh;
+    // background: $background;
     display: flex;
     padding: 4vw 5vw;
     justify-content: center;
     align-items: center;
-    position: relative;
-    .svg_transition{
-        top: -35vh;
-        position: absolute;
-        width: 100%;
+    h1{
+        text-shadow: $blanc 0px 0px 15px;
     }
     p {
         margin-block: 3vh;
@@ -22,17 +19,6 @@
 
     .left {
         width: 50%;
-        .lien {
-            color: $background;
-            background: $blanc;
-            padding: 10px;
-            transition: all 0.5s;
-            &:hover {
-                background: $background;
-                color: $blanc;
-                transform: scale(0.9);
-            }
-        }
     }
 
     .right {
@@ -40,10 +26,11 @@
     }
 
     #graphique1 {
-        background-color: $blanc;
+        background-color: $background;
         padding: 1rem;
         border-radius: 10px;
         width: 100%;
+        height: 50vh;
     }
 
     @media screen and (max-width: 1192px) {
@@ -69,13 +56,16 @@
 }
 
 .canvas2 {
-    height: 100vh;
-    background: $background;
+    min-height: 100vh;
+    // background: $background;
     display: flex;
     padding: 4vw 5vw;
     justify-content: center;
     align-items: center;
     text-align: right;
+    h1{
+        text-shadow: $blanc 0px 0px 15px;
+    }
     p {
         padding-left: 5vw;
         margin-block: 3vh;
@@ -91,24 +81,14 @@
 
     .right {
         width: 50%;
-        .lien {
-            color: $background;
-            background: $blanc;
-            padding: 10px;
-            transition: all 0.5s;
-            &:hover {
-                background: $background;
-                color: $blanc;
-                transform: scale(0.9);
-            }
-        }
     }
 
     #graphique2 {
-        background-color: $bleu-fonce;
-        padding: 2rem;
+        background-color: $background;
+        padding: 1rem;
         border-radius: 10px;
         width: 100%;
+        height: 50vh;
     }
 
     @media screen and (max-width: 1192px) {
@@ -117,65 +97,65 @@
         }
 
         #graphique2 {
-            background-color: $blanc;
-            padding: 1rem;
+            margin-block: 5vh;
             width: 100%;
         }
     }
 }
 
-.chart3 {
-    height: 100vh;
-    padding: 5vw;
-    background: #bdc3c7;
-    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
-    background: linear-gradient(to right, #2c3e50, #bdc3c7);
+.canvas3 {
+    min-height: 100vh;
+    // background: $bleu-fonce;
     display: flex;
+    padding: 4vw 5vw;
     justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    .header_chart {
-        display: flex;
-        flex-direction: column;
-        .header_colonne_gauche {
-            flex: 50%;
-            h1 {
-                background: $blanc;
-                padding: 0.5rem 1rem;
-                mix-blend-mode: screen;
-                border-radius: 5px;
-                text-transform: uppercase;
-                font-weight: bolds;
-            }
+    align-items: center;
+    h1{
+        text-shadow: $blanc 0px 0px 15px;
+    }
+    p {
+        margin-block: 3vh;
+        padding-right: 5vw;
+        line-height: 2;
+    }
+    .column {
+        float: left;
+    }
+
+    .left {
+        width: 50%;
+    }
+
+    .right {
+        width: 50%;
+    }
+
+    #graphique3 {
+        background-color: $background;
+        padding: 1rem;
+        border-radius: 10px;
+        width: 100%;
+        height: 50vh;
+    }
+
+    @media screen and (max-width: 1192px) {
+        .column {
+            width: 100%;
         }
-        .header_colonne_droite {
-            flex: 50%;
-            label {
-                color: $blanc;
-                font-weight: bold;
-                display: none;
-            }
-            select {
-                border-radius: 5px;
-                border: none;
-                padding: 0.5rem 1rem;
-                margin-block: 2vh;
-                font-family: $font-titre;
+
+        .svg_transition{
+            display: none;
+        }
+
+        .canvas1 {
+            p {
                 text-align: center;
             }
         }
-    }
-    p {
-        margin-top: 5vw;
-        color: $background;
-        background: $blanc;
-        padding: 0.5rem 1rem;
-        border-radius: 5px;
-        text-align: justify;
-    }
-    #graphique3 {
-        background-color: $blanc;
-        padding: 0.5rem 1rem;
-        border-radius: 5px;
+
+        #graphique3 {
+            margin-block: 5vh;
+            width: 100%;
+        }
     }
 }

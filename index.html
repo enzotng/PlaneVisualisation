@@ -31,114 +31,159 @@
             </div>
         </section>
 
-        <aside>
-            <ul>
-                <li>
-                    <a class="indicator active" href="#hero"></a>
-                </li>
-                <li>
-                    <a class="indicator" href="#canvas1"></a>
-                </li>
-                <li>
-                    <a class="indicator" href="#canvas2"></a>
-                </li>
-                <li>
-                    <a class="indicator" href="#canvas3"></a>
-                </li>
-            </ul>
-        </aside>
+        <section class="section_slider">
+            <div class="s-wrap s-type-1" role="slider">
+                <input type="radio" id="s-1" name="slider-control" checked="checked">
+                <input type="radio" id="s-2" name="slider-control">
+                <input type="radio" id="s-3" name="slider-control">
+                <ul class="s-content">
+                    <li class="s-item s-item-1">
+                        <section id="canvas1" class="canvas1">
+                            <div class="row">
+                                <div class="column left">
+                                    <h1>Departure flights from CDG</h1>
+                                    <p>Paris Charles de Gaulle Airport (French: Aéroport de Paris-Charles-de-Gaulle,
+                                        IATA: CDG,
+                                        ICAO:
+                                        LFPG),
+                                        also known as Roissy Airport or simply Paris CDG, is the principal airport
+                                        serving the
+                                        French
+                                        capital,
+                                        Paris (and its metropolitan area), and the largest international airport in
+                                        France. Opened
+                                        in
+                                        1974, it
+                                        is in Roissy-en-France, 23 km (14 mi) northeast of Paris and is named after
+                                        statesman
+                                        Charles de
+                                        Gaulle
+                                        (1890-1970), whose initials (CDG) is used as its IATA airport code.</p>
 
-        <section id="canvas1" class="canvas1">
-            <svg class="svg_transition" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="#07062c" fill-opacity="1"
-                    d="M0,128L60,138.7C120,149,240,171,360,197.3C480,224,600,256,720,250.7C840,245,960,203,1080,154.7C1200,107,1320,53,1380,26.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
-                </path>
-            </svg>
-            <div class="row">
-                <div class="column left">
-                    <h1>Departure flights from CDG</h1>
-                    <p>Paris Charles de Gaulle Airport (French: Aéroport de Paris-Charles-de-Gaulle, IATA: CDG, ICAO:
-                        LFPG),
-                        also known as Roissy Airport or simply Paris CDG, is the principal airport serving the French
-                        capital,
-                        Paris (and its metropolitan area), and the largest international airport in France. Opened in
-                        1974, it
-                        is in Roissy-en-France, 23 km (14 mi) northeast of Paris and is named after statesman Charles de
-                        Gaulle
-                        (1890-1970), whose initials (CDG) is used as its IATA airport code.</p>
+                                    <a href="#canvas2" class="lien">View other charts</a>
+                                </div>
+                                <div class="column right">
+                                    <canvas id="graphique1"></canvas>
+                                </div>
+                            </div>
+                        </section>
+                    </li>
+                    <li class="s-item s-item-2">
+                        <section id="canvas2" class="canvas2">
+                            <div class="row">
+                                <div class="column left">
+                                    <canvas id="graphique2"></canvas>
+                                </div>
+                                <div class="column right">
+                                    <h1>Arrival flights from CDG</h1>
+                                    <p>Paris Charles de Gaulle Airport (French: Aéroport de Paris-Charles-de-Gaulle,
+                                        IATA: CDG,
+                                        ICAO:
+                                        LFPG),
+                                        also known as Roissy Airport or simply Paris CDG, is the principal airport
+                                        serving the
+                                        French
+                                        capital,
+                                        Paris (and its metropolitan area), and the largest international airport in
+                                        France. Opened
+                                        in
+                                        1974, it
+                                        is in Roissy-en-France, 23 km (14 mi) northeast of Paris and is named after
+                                        statesman
+                                        Charles de
+                                        Gaulle
+                                        (1890-1970), whose initials (CDG) is used as its IATA airport code.</p>
 
-                    <a href="#canvas2" class="lien">View other charts</a>
+                                    <a href="#canvas3" class="lien">View other charts</a>
+                                </div>
+                            </div>
+                        </section>
+                    </li>
+                    <li class="s-item s-item-3">
+                        <section id="canvas3" class="canvas3">
+                            <div class="row">
+                                <div class="column left">
+                                    <h1>Departure flights from CDG</h1>
+                                    <p>Paris Charles de Gaulle Airport (French: Aéroport de Paris-Charles-de-Gaulle,
+                                        IATA: CDG,
+                                        ICAO:
+                                        LFPG),
+                                        also known as Roissy Airport or simply Paris CDG, is the principal airport
+                                        serving the
+                                        French
+                                        capital,
+                                        Paris (and its metropolitan area), and the largest international airport in
+                                        France. Opened
+                                        in
+                                        1974, it
+                                        is in Roissy-en-France, 23 km (14 mi) northeast of Paris and is named after
+                                        statesman
+                                        Charles de
+                                        Gaulle
+                                        (1890-1970), whose initials (CDG) is used as its IATA airport code.</p>
+
+                                    <a href="#canvas3" class="lien">View other charts</a>
+                                </div>
+                                <div class="column right">
+                                    <canvas id="graphique3"></canvas>
+                                </div>
+                            </div>
+                        </section>
+                    </li>
+                </ul>
+                <div class="s-control">
+                    <label class="s-c-1" for="s-1"></label>
+                    <label class="s-c-2" for="s-2"></label>
+                    <label class="s-c-3" for="s-3"></label>
                 </div>
-                <div class="column right">
-                    <canvas id="graphique1"></canvas>
+                <div class="s-nav">
+                    <label class="s-nav-1 right" for="s-2"></label>
+                    <label class="s-nav-2 left" for="s-1"></label>
+                    <label class="s-nav-2 right" for="s-3"></label>
+                    <label class="s-nav-3 left" for="s-2"></label>
                 </div>
             </div>
-        </section>
 
-        <section id="canvas2" class="canvas2">
-            <div class="row">
-                <div class="column left">
-                    <canvas id="graphique2"></canvas>
-                </div>
-                <div class="column right">
-                    <h1>Arrival flights from CDG</h1>
-                    <p>Paris Charles de Gaulle Airport (French: Aéroport de Paris-Charles-de-Gaulle, IATA: CDG, ICAO:
-                        LFPG),
-                        also known as Roissy Airport or simply Paris CDG, is the principal airport serving the French
-                        capital,
-                        Paris (and its metropolitan area), and the largest international airport in France. Opened in
-                        1974, it
-                        is in Roissy-en-France, 23 km (14 mi) northeast of Paris and is named after statesman Charles de
-                        Gaulle
-                        (1890-1970), whose initials (CDG) is used as its IATA airport code.</p>
-
-                    <a href="#canvas3" class="lien">View other charts</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="canvas3" class="chart3">
-            <div class="header_chart">
-                <div class="header_colonne_gauche">
-                    <h1>Nombre de vols par continent</h1>
-                </div>
-                <div class="header_colonne_droite">
-                    <label for="annee">Année :</label>
-                    <select name="annee" id="annee">
-                        <option value="2023">2023</option>
-                        <option value="2022">2022</option>
-                        <option value="2021">2021</option>
-                        <option value="2020">2020</option>
+            <section id="wikiplane" class="wikiplane">
+                <h1>WikiPlane</h1>
+                <p class="desc_wiki">The Wright brothers flights in 1903 are recognized by the Fédération Aéronautique
+                    Internationale (FAI),
+                    the standard setting and record-keeping body for aeronautics, as "the first sustained and controlled
+                    heavier-than-air powered flight". By 1905, the Wright Flyer III was capable of fully controllable,
+                    stable flight for substantial periods. The Wright brothers credited Otto Lilienthal as a major
+                    inspiration for their decision to pursue manned flight.</p>
+                <form name="form1" id="form1" action="/action_page.php">
+                    <label>Compagnie aérienne :</label>
+                    <select name="subject" id="compagnie">
                     </select>
-                </div>
-            </div>
-            <canvas id="canvas" width="100vw" height="35vh"></canvas>
-            <p>
-                Le reste du top 20 d'Eurocontrol la semaine dernière plaçait Wizz Air, KLM Group, British Airways
-                Group, Vueling et Eurowings devant SAS Scandinavian, Pegasus Airlines, SWISS, Iberia, Norwegian, TAP
-                Air Portugal, TUI Group, Wideroe, Finnair et ITA Airways, cette dernière opérant en moyenne 237 vols
-                quotidiens (-1% par rapport à la semaine précédente).
-            </p>
-        </section>
 
-        <section id="wikiplane" class="wikiplane">
-            <h1>WikiPlane</h1>
-            <p>The Wright brothers flights in 1903 are recognized by the Fédération Aéronautique Internationale (FAI),
-                the standard setting and record-keeping body for aeronautics, as "the first sustained and controlled
-                heavier-than-air powered flight". By 1905, the Wright Flyer III was capable of fully controllable,
-                stable flight for substantial periods. The Wright brothers credited Otto Lilienthal as a major
-                inspiration for their decision to pursue manned flight.</p>
-            <form name="form1" id="form1" action="/action_page.php">
-                <label>Compagnie aérienne :</label>
-                <select name="subject" id="compagnie">
-                </select>
+                    <label>Modèle :</label>
+                    <select id="modeleAvion">
+                    </select>
 
-                <select id="modeleAvion">
-                </select>
+                    <input type="submit" value="Rechercher...">
 
-                <input type="submit" value="Rechercher...">
-            </form>
-        </section>
+                    <hr>
+
+                    <p>Résultat pour : </p>
+                    <img src="./assets/images/png/AFR777.png" alt="">
+
+                    <p>Spécifications de l'appareil : </p>
+                    <div class="specs_ul">
+                        <!-- <ul>
+                        <li>Longueur : 73,86 M</li>
+                        <li>Envergure : 64,80 M</li>
+                        <li>Nombre de sièges : 296 - 472</li>
+                        <li>Vitesse de pointe : M 0,84</li>
+                        <li>Type de moteur : GE90</li>
+                    </ul> -->
+                        <ul>
+                            <li id="specs"></li>
+                        </ul>
+                    </div>
+                </form>
+
+            </section>
 
     </main>
     <footer>

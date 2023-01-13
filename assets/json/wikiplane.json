@@ -9,28 +9,34 @@
                 "idAvion": "1",
                 "constructeur": "Boeing",
                 "modele": "777W",
-                "description": "English",
-                "imageSrc": "./assets/images/png/AFR777.png"
+                "specifications": {
+                    "longueur": "Longueur : 73,86 M",
+                    "envergure": "Envergure : 64,80 M",
+                    "nbSieges": "Nombre de sièges : 296 - 472",
+                    "vitesse": "Vitesse de pointe : M 0,84",
+                    "typeMoteur": "Type de moteur : GE90",
+                    "imageSrc": "./assets/images/png/AFR777.png"
+                }
             },
             "A350": {
                 "idAvion": "2",
                 "constructeur": "Airbus",
                 "modele": "A350-900",
-                "description": "Postegues",
+                "longueur": "Longueur : 73,86 M",
                 "imageSrc": "./assets/images/png/AFRA350.png"
             },
             "A320": {
                 "idAvion": "3",
                 "constructeur": "Airbus",
                 "modele": "A320",
-                "description": "Russian",
+                "longueur": "Longueur : 73,86 M",
                 "imageSrc": "./assets/images/png/AFR777.png"
             },
             "A330": {
                 "idAvion": "4",
                 "constructeur": "Airbus",
                 "modele": "A330-200",
-                "description": "Spanish",
+                "longueur": "Longueur : 73,86 M",
                 "imageSrc": "./assets/images/png/AFR777.png"
             }
         },
@@ -43,7 +49,7 @@
                 "idAvion": "1",
                 "constructeur": "Boeing",
                 "modele": "777W",
-                "description": "English",
+                "longueur": "Longueur : 73,86 M",
                 "imageSrc": "./assets/images/png/AFR777.png"
             },
             "A350": {

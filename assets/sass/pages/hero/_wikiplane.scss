@@ -1,6 +1,7 @@
 .wikiplane{
-    min-height: 100vh;
-    background: $background;
+    height: auto;
+    padding-block: 5vw;
+    // background: $background;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +9,7 @@
     h1{
         text-shadow: $blanc 0px 0px 15px;
     }
-    p{
+    .desc_wiki{
         width: 50%;
         margin-block: 3vh;
         line-height: 2;
@@ -23,6 +24,10 @@
         flex-direction: column;
         padding: 20px;
         border-radius: 5px;
+        color: $background;
+        label{
+            margin-block: 2vh;
+        }
         select{
             font-family: $font-titre;
             background: $blanc-clair;
@@ -48,6 +53,30 @@
             &:hover{
                 background: $background;
                 color: $blanc;
+                transform: scale(0.99);
+            }
+        }
+        hr{
+            width: 50%;
+            border: 1px solid $blanc-clair;
+        }
+        p{
+            margin-block: 2vh;
+        }
+        img{
+            background: $blanc-clair;
+            padding: 20px;
+            border-radius: 5px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .specs_ul{
+            background: $blanc-clair;
+            border-radius: 5px;
+            padding: 20px;
+            ul{
+                list-style-type: disc;
+                margin-left: 1vw;
             }
         }
     }
