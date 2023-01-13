@@ -1,30 +1,72 @@
-[
-    {
-        "name": "Air France",
-        "constructeur": "Boeing",
-        "modele": "777W",
-        "description": "English",
-        "imageSrc": "assets/img/flags-icons/en-flag.png"
-    },
-    {
-        "name": "Postegues",
-        "constructeur": "Airbus",
-        "modele": "A350-900",
-        "description": "Postegues",
-        "imageSrc": "assets/img/flags-icons/pt-flag.png"
-    },
-    {
-        "name": "Russian",
-        "constructeur": "Airbus",
-        "modele": "A320",
-        "description": "Russian",
-        "imageSrc": "assets/img/flags-icons/ru-flag.png"
-    },
-    {
-        "name": "Spanish",
-        "constructeur": "Airbus",
-        "modele": "A330-200",
-        "description": "Spanish",
-        "imageSrc": "assets/img/flags-icons/es-flag.png"
-    }
-]
+{
+    "jsonWiki": [
+        {
+            "compagnie": {
+                "idCompagnie": "1",
+                "nomCompagnie": "Air France"
+            },
+            "Boeing777": {
+                "idAvion": "1",
+                "constructeur": "Boeing",
+                "modele": "777W",
+                "description": "English",
+                "imageSrc": "./assets/images/png/AFR777.png"
+            },
+            "A350": {
+                "idAvion": "2",
+                "constructeur": "Airbus",
+                "modele": "A350-900",
+                "description": "Postegues",
+                "imageSrc": "./assets/images/png/AFRA350.png"
+            },
+            "A320": {
+                "idAvion": "3",
+                "constructeur": "Airbus",
+                "modele": "A320",
+                "description": "Russian",
+                "imageSrc": "./assets/images/png/AFR777.png"
+            },
+            "A330": {
+                "idAvion": "4",
+                "constructeur": "Airbus",
+                "modele": "A330-200",
+                "description": "Spanish",
+                "imageSrc": "./assets/images/png/AFR777.png"
+            }
+        },
+        {
+            "compagnie": {
+                "idCompagnie": "1",
+                "nomCompagnie": "American Airlines"
+            },
+            "Boeing777": {
+                "idAvion": "1",
+                "constructeur": "Boeing",
+                "modele": "777W",
+                "description": "English",
+                "imageSrc": "./assets/images/png/AFR777.png"
+            },
+            "A350": {
+                "idAvion": "2",
+                "constructeur": "Airbus",
+                "modele": "A350-900",
+                "description": "Postegues",
+                "imageSrc": "./assets/images/png/AFRA350.png"
+            },
+            "A320": {
+                "idAvion": "3",
+                "constructeur": "Airbus",
+                "modele": "A320",
+                "description": "Russian",
+                "imageSrc": "./assets/images/png/AFR777.png"
+            },
+            "A330": {
+                "idAvion": "4",
+                "constructeur": "Airbus",
+                "modele": "A330-200",
+                "description": "Spanish",
+                "imageSrc": "./assets/images/png/AFR777.png"
+            }
+        }
+    ]
+}

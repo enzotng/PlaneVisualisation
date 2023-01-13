@@ -411,8 +411,8 @@ footer p {
   transform: scale(0.9);
 }
 .canvas2 #graphique2 {
-  background-color: #e9e8fc;
-  padding: 1rem;
+  background-color: #07062c;
+  padding: 2rem;
   border-radius: 10px;
   width: 100%;
 }
@@ -519,6 +519,7 @@ footer p {
   padding: 20px;
   border-radius: 5px;
   width: 100%;
+  margin-block-end: 1vh;
 }
 .wikiplane form input[type=submit] {
   font-family: "Gathero";

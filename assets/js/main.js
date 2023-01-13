@@ -64,7 +64,7 @@ window.onload = function () {
 
   async function getData() {
     const requete = await fetch(
-      "https://airlabs.co/api/v9/routes?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034&dep_iata=CDG"
+      // "https://airlabs.co/api/v9/routes?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034&dep_iata=CDG"
     );
     console.log(requete);
     const response = await requete.json();
@@ -111,7 +111,7 @@ window.onload = function () {
     });
 
     const requete2 = await fetch(
-      "https://airlabs.co/api/v9/routes?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034&arr_iata=CDG"
+      // "https://airlabs.co/api/v9/routes?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034&arr_iata=CDG"
     );
     console.log(requete2);
     const response2 = await requete2.json();
@@ -128,6 +128,7 @@ window.onload = function () {
     }
 
     Chart.defaults.font.size = 18;
+    Chart.defaults.color = '#fff';
     new Chart(document.getElementById("graphique2"), {
       type: "bar",
       data: {
@@ -173,17 +174,38 @@ $(window).on("load", function () {
 
 // WikiPlane Dropdown
 
-$select = $('#localeId'); 
+select = $('#modeleAvion');
+select2 = $('#compagnie'); 
+
 $.ajax({
-    url: '../assets/json/languages.json',
+    url: '../assets/json/wikiplane.json',
     dataType:'JSON',
     success:function(data){
-        $select.html('');
-        $.each(data.languages, function (key, val) {
-            $select.append('<option id="' + val.id + '">' + val.name + '</option>');
+      console.log(data.jsonWiki[0].Boeing777.constructeur);
+        select.html('');
+        $.each(data.jsonWiki, function (val) {
+          console.log(data.jsonWiki[0].Boeing777.constructeur);
+            select.append('<option id="' + data.jsonWiki[0].Boeing777.idAvion + " " + data.jsonWiki[0].Boeing777.modele + '</option>');
         })
     },
     error:function(){
-        $select.html('<option id="-1">none available</option>');
-    }
+        $select.html('<option id="-1">Aucune compagnie disponible</option>');
+    },
+
+});
+
+$.ajax({
+  url: '../assets/json/wikiplane.json',
+  dataType:'JSON',
+success:function(data2){
+  console.log(data2.jsonWiki[0].compagnie.nomCompagnie);
+    select2.html('');
+    $.each(data2.jsonWiki, function (val2) {
+      // console.log(data2.jsonWiki[val2].compagnie.nomCompagnie);
+        select2.append('<option id="' + data2.jsonWiki[val2].compagnie.idCompagnie + '">' + data2.jsonWiki[val2].compagnie.nomCompagnie + '</option>');
+    })
+},
+error:function(){
+    $select2.html('<option id="-1">Aucune compagnie disponible</option>');
+}
 });
