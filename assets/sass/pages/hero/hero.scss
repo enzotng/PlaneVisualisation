@@ -9,7 +9,10 @@
         color: $blanc;
         text-transform: uppercase;
         text-shadow: $blanc 0px 0px 15px;
-        margin-bottom: 15vh;
+        margin-bottom: 2vh;
+    }
+    h2{
+        font-size: 1.5rem;
     }
 
     .scroll-down {
@@ -50,7 +53,7 @@
 }
 
 $switch-speed: 1s;
-$slider-number: 4;
+$slider-number: 5;
 $slider-width: 100% / $slider-number;
 
 .section_slider {
@@ -66,11 +69,11 @@ $slider-width: 100% / $slider-number;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 5px;
-        background: $bleu-fonce;
+        border-radius: 20px;
+        // background: $bleu-fonce;
         box-shadow: 0 8px 32px 0 rgba(0, 9 ,31, 0.35);
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
         overflow: hidden;
         input {
             display: none;
@@ -176,22 +179,3 @@ $slider-width: 100% / $slider-number;
         }
     }
 }
-
-// @keyframes slider-animation {
-//   $i: 0;
-//   $j: 0;
-//   $times: ($slider-number - 1) * 2;
-//   @while $i < 100 {
-//     #{$i}%,
-//     #{$i + 7}% {
-//       @if $i < 50 {
-//         transform: translateX(-$slider-width * $j);
-//           } @else {
-//             transform: translateX(-$slider-width * ($times - $j));
-//               }
-//     }
-
-//     $i: $i + 100 / $times;
-//     $j: $j + 1;
-//   }
-// }

@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="./assets/images/ico/Martz90-Circle-Addon2-Plane-flight.ico" />
+    <link rel="icon" type="image/png" href="./assets/images/ico/logoVF.ico" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>PlaneVisualisation - Les vols en temps réel</title>
+    <title>Homepage - Fly smarter with PlaneVisualization's data insights</title>
 </head>
 
 <body>
@@ -22,7 +22,8 @@
         </div> -->
 
         <section id="hero" class="hero">
-            <h1>Plane Visualisation</h1>
+            <h1>Plane Visualization</h1>
+            <h2>Fly smarter with PlaneVisualization's data insights</h2>
             <div class="scroll-down">
                 <a href="#canvas1">
                     <span></span>
@@ -37,31 +38,17 @@
                 <input type="radio" id="s-1" name="slider-control" checked="checked">
                 <input type="radio" id="s-2" name="slider-control">
                 <input type="radio" id="s-3" name="slider-control">
+                <input type="radio" id="s-4" name="slider-control">
                 <ul class="s-content">
-                    <li class="s-item s-item-1">
+                    <li id="test1" class="s-item s-item-1">
                         <section id="canvas1" class="canvas1">
                             <div class="row">
                                 <div class="column left">
                                     <h1>Departure flights from CDG</h1>
-                                    <p>Paris Charles de Gaulle Airport (French: Aéroport de Paris-Charles-de-Gaulle,
-                                        IATA: CDG,
-                                        ICAO:
-                                        LFPG),
-                                        also known as Roissy Airport or simply Paris CDG, is the principal airport
-                                        serving the
-                                        French
-                                        capital,
-                                        Paris (and its metropolitan area), and the largest international airport in
-                                        France. Opened
-                                        in
-                                        1974, it
-                                        is in Roissy-en-France, 23 km (14 mi) northeast of Paris and is named after
-                                        statesman
-                                        Charles de
-                                        Gaulle
-                                        (1890-1970), whose initials (CDG) is used as its IATA airport code.</p>
-
-                                    <a href="#canvas2" class="lien">View other charts</a>
+                                    <p>Departure flights from Charles de Gaulle Airport (CDG) are the perfect opportunity to discover new destinations around the world. From one of France's main international airports, passengers can fly to destinations such as New York, Tokyo, Sydney, Rio de Janeiro and many more.</p>
+                                    <p>It also offer a variety of travel classes, from economy to business and first class, to meet the needs of all types of travelers. Whether you're on a business trip or on vacation, there is a departure flight from CDG that fits your needs.</p>
+                                    <p>This data visualization presents an overview of the departures of a certain number of aircrafts per month.</p>
+                                    <a href="#test2" class="lien">Next chart</a>
                                 </div>
                                 <div class="column right">
                                     <canvas id="graphique1"></canvas>
@@ -69,7 +56,7 @@
                             </div>
                         </section>
                     </li>
-                    <li class="s-item s-item-2">
+                    <li id="test2" class="s-item s-item-2">
                         <section id="canvas2" class="canvas2">
                             <div class="row">
                                 <div class="column left">
@@ -77,25 +64,10 @@
                                 </div>
                                 <div class="column right">
                                     <h1>Arrival flights from CDG</h1>
-                                    <p>Paris Charles de Gaulle Airport (French: Aéroport de Paris-Charles-de-Gaulle,
-                                        IATA: CDG,
-                                        ICAO:
-                                        LFPG),
-                                        also known as Roissy Airport or simply Paris CDG, is the principal airport
-                                        serving the
-                                        French
-                                        capital,
-                                        Paris (and its metropolitan area), and the largest international airport in
-                                        France. Opened
-                                        in
-                                        1974, it
-                                        is in Roissy-en-France, 23 km (14 mi) northeast of Paris and is named after
-                                        statesman
-                                        Charles de
-                                        Gaulle
-                                        (1890-1970), whose initials (CDG) is used as its IATA airport code.</p>
-
-                                    <a href="#canvas3" class="lien">View other charts</a>
+                                    <p>Arrival flights to Charles de Gaulle Airport (CDG) offer a glimpse into the internationality of France. Passengers can arrive at CDG from destinations such as New York, Tokyo, Sydney, Rio de Janeiro and many more.</p>
+                                    <p>Arrival flights to CDG also offer a variety of services for passengers such as quick customs formalities, transportation options to the city and efficient baggage claim services. Arrival to CDG are an opportunity to discover France and its many destinations around the world. With the data visualization presenting an overview of arrivals, users can easily plan their trip and explore the trends of aircraft arrivals.</p>
+                                    <p>This data visualization presents an overview of the arrivals of a certain number of aircrafts per month.</p>
+                                    <a href="#test1" class="lien">Previous chart</a>
                                 </div>
                             </div>
                         </section>
@@ -104,26 +76,11 @@
                         <section id="canvas3" class="canvas3">
                             <div class="row">
                                 <div class="column left">
-                                    <h1>Departure flights from CDG</h1>
-                                    <p>Paris Charles de Gaulle Airport (French: Aéroport de Paris-Charles-de-Gaulle,
-                                        IATA: CDG,
-                                        ICAO:
-                                        LFPG),
-                                        also known as Roissy Airport or simply Paris CDG, is the principal airport
-                                        serving the
-                                        French
-                                        capital,
-                                        Paris (and its metropolitan area), and the largest international airport in
-                                        France. Opened
-                                        in
-                                        1974, it
-                                        is in Roissy-en-France, 23 km (14 mi) northeast of Paris and is named after
-                                        statesman
-                                        Charles de
-                                        Gaulle
-                                        (1890-1970), whose initials (CDG) is used as its IATA airport code.</p>
-
-                                    <a href="#canvas3" class="lien">View other charts</a>
+                                    <h1>All airports in the world</h1>
+                                    <p>Airports are key hubs of global connectivity, allowing people to travel quickly and efficiently from one place to another. There are thousands of airports around the world, ranging from large international hubs to small regional airports. Large international airports, such as Heathrow in London, Charles de Gaulle in Paris, and John F. Kennedy in New York, are major stopping points for international travelers and serve millions of passengers each year. They have modern facilities, shops, restaurants, VIP lounges, and shuttle services for travelers.</p>
+                                    <p>On the other hand, small regional airports generally serve more limited destinations and have more modest facilities. They are often used by local travelers for domestic flights or flights to tourist destinations.</p>
+                                    <p>This graph is the representation of all airports in the world using a CSV file including their name, latitude and longitude. Regarding the map, Leaflet is an interactive map that allows for the display of the entire world.</p>
+                                    <a href="#s-item-4" class="lien">Next chart</a>
                                 </div>
                                 <div class="column right">
                                     <div id="graphique3"></div>
@@ -131,63 +88,56 @@
                             </div>
                         </section>
                     </li>
+
+                    <li class="s-item s-item-4">
+                        <section id="wikiplane" class="wikiplane">
+                            <div class="row">
+                                <div class="column left">
+                                    <form name="form1" id="form1" action="/action_page.php">
+                                        <label>Compagnie aérienne :</label>
+                                        <select name="compagnie" id="compagnie">
+                                        </select>
+                    
+                                        <label>Modèle :</label>
+                                        <select name="modeleAvion" id="modeleAvion">
+                                            <option value="1">Boeing 777-300ER</option>
+                                        </select>
+                    
+                                        <hr>
+                    
+                                        <p>Résultat pour : </p>
+                                        <div class="divImg">
+                                            <img class="imageModele" src="./assets/images/png/AFR777.png" alt="">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="column right">
+                                    <h1>WikiPlane</h1>
+                                    <p>Wikiplane is an online platform that provides a vast collection of information on airplanes and airlines. It is a true flight log for aviation enthusiasts, frequent travelers and professionals in the aviation industry. The platform provides detailed information on different types of airplanes, from jets to propeller planes, as well as information on airlines, flight routes and schedules. Users can also view information on airports, terminals, services and amenities.</p>
+                                    <a href="#canvas2" class="lien">Next chart</a>
+                                </div>
+                        </section>
+                    </li>
                 </ul>
                 <div class="s-control">
                     <label class="s-c-1" for="s-1"></label>
                     <label class="s-c-2" for="s-2"></label>
                     <label class="s-c-3" for="s-3"></label>
+                    <label class="s-c-4" for="s-4"></label>
                 </div>
                 <div class="s-nav">
                     <label class="s-nav-1 right" for="s-2"></label>
                     <label class="s-nav-2 left" for="s-1"></label>
                     <label class="s-nav-2 right" for="s-3"></label>
                     <label class="s-nav-3 left" for="s-2"></label>
+                    <label class="s-nav-3 right" for="s-4"></label>
+                    <label class="s-nav-4 left" for="s-3"></label>
                 </div>
             </div>
 
-            <section id="wikiplane" class="wikiplane">
-                <h1>WikiPlane</h1>
-                <p class="desc_wiki">The Wright brothers flights in 1903 are recognized by the Fédération Aéronautique
-                    Internationale (FAI),
-                    the standard setting and record-keeping body for aeronautics, as "the first sustained and controlled
-                    heavier-than-air powered flight". By 1905, the Wright Flyer III was capable of fully controllable,
-                    stable flight for substantial periods. The Wright brothers credited Otto Lilienthal as a major
-                    inspiration for their decision to pursue manned flight.</p>
-                <form name="form1" id="form1" action="/action_page.php">
-                    <label>Compagnie aérienne :</label>
-                    <select name="subject" id="compagnie">
-                    </select>
-
-                    <label>Modèle :</label>
-                    <select id="modeleAvion">
-                    </select>
-
-                    <input type="submit" value="Rechercher...">
-
-                    <hr>
-
-                    <p>Résultat pour : </p>
-                    <img src="./assets/images/png/AFR777.png" alt="">
-
-                    <p>Spécifications de l'appareil : </p>
-                    <div class="specs_ul">
-                        <!-- <ul>
-                        <li>Longueur : 73,86 M</li>
-                        <li>Envergure : 64,80 M</li>
-                        <li>Nombre de sièges : 296 - 472</li>
-                        <li>Vitesse de pointe : M 0,84</li>
-                        <li>Type de moteur : GE90</li>
-                    </ul> -->
-                        <ul>
-                            <li id="specs"></li>
-                        </ul>
-                    </div>
-                </form>
-
-            </section>
-
     </main>
     <footer>
+        <img class="imgFooter" src="./assets/images/png/LogoSite.png" alt="">
         <ul>
             <li><a href=""><i class="bi bi-github"></i></a></li>
             <li><a href=""><i class="bi bi-linkedin"></i></a></li>

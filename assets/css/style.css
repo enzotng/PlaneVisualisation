@@ -247,13 +247,24 @@ header span i {
   }
 }
 footer {
+  margin-top: 20vw;
   height: auto;
   display: flex;
   padding: 2vw;
   justify-content: center;
   align-items: center;
-  background: #07062c;
   flex-direction: column;
+  position: relative;
+  z-index: 6;
+}
+footer .svg_footer {
+  position: absolute;
+  bottom: 150px;
+  z-index: -1;
+}
+footer .imgFooter {
+  width: 10vw;
+  filter: drop-shadow(0 0 30px #07062c);
 }
 footer ul {
   display: flex;
@@ -278,6 +289,12 @@ footer p {
   text-align: center;
 }
 
+@media screen and (max-width: 1192px) {
+  .imgFooter {
+    width: 100%;
+    filter: drop-shadow(0 0 30px #07062c);
+  }
+}
 .hero {
   height: calc(110vh - 80px);
   display: flex;
@@ -290,7 +307,10 @@ footer p {
   color: #e9e8fc;
   text-transform: uppercase;
   text-shadow: #e9e8fc 0px 0px 15px;
-  margin-bottom: 15vh;
+  margin-bottom: 2vh;
+}
+.hero h2 {
+  font-size: 1.5rem;
 }
 .hero .scroll-down {
   position: absolute;
@@ -341,11 +361,10 @@ footer p {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
-  background: #07062c;
+  border-radius: 20px;
   box-shadow: 0 8px 32px 0 rgba(0, 9, 31, 0.35);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
   overflow: hidden;
 }
 .section_slider .s-wrap input {
@@ -357,13 +376,13 @@ footer p {
   position: absolute;
   top: 0;
   left: 0;
-  width: 400%;
+  width: 500%;
   height: 100vh;
   transition: transform 1s;
 }
 .section_slider .s-wrap .s-item {
   display: inline-block;
-  width: 25%;
+  width: 20%;
   height: 100vh;
 }
 
@@ -431,7 +450,7 @@ footer p {
   display: block;
 }
 .s-type-1 #s-2:checked ~ .s-content {
-  transform: translateX(-25%);
+  transform: translateX(-20%);
 }
 .s-type-1 #s-2:checked ~ .s-control .s-c-2 {
   background: #00091f;
@@ -441,7 +460,7 @@ footer p {
   display: block;
 }
 .s-type-1 #s-3:checked ~ .s-content {
-  transform: translateX(-50%);
+  transform: translateX(-40%);
 }
 .s-type-1 #s-3:checked ~ .s-control .s-c-3 {
   background: #00091f;
@@ -451,7 +470,7 @@ footer p {
   display: block;
 }
 .s-type-1 #s-4:checked ~ .s-content {
-  transform: translateX(-75%);
+  transform: translateX(-60%);
 }
 .s-type-1 #s-4:checked ~ .s-control .s-c-4 {
   background: #00091f;
@@ -459,6 +478,26 @@ footer p {
 }
 .s-type-1 #s-4:checked ~ .s-nav .s-nav-4 {
   display: block;
+}
+.s-type-1 #s-5:checked ~ .s-content {
+  transform: translateX(-80%);
+}
+.s-type-1 #s-5:checked ~ .s-control .s-c-5 {
+  background: #00091f;
+  border: 1px solid #e9e8fc;
+}
+.s-type-1 #s-5:checked ~ .s-nav .s-nav-5 {
+  display: block;
+}
+
+canvas {
+  background-color: #00091f;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 100%;
+  min-height: 50vh;
+  filter: drop-shadow(0 0 10px #00091f);
+  object-fit: contain;
 }
 
 .canvas1 {
@@ -472,24 +511,23 @@ footer p {
   text-shadow: #e9e8fc 0px 0px 15px;
 }
 .canvas1 p {
-  margin-block: 3vh;
   padding-right: 5vw;
   line-height: 2;
+  text-align: justify;
 }
 .canvas1 .column {
   float: left;
 }
 .canvas1 .left {
   width: 50%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 .canvas1 .right {
   width: 50%;
-}
-.canvas1 #graphique1 {
-  background-color: #00091f;
-  padding: 1rem;
-  border-radius: 10px;
-  width: 100%;
   height: 50vh;
 }
 @media screen and (max-width: 1192px) {
@@ -521,7 +559,6 @@ footer p {
 }
 .canvas2 p {
   padding-left: 5vw;
-  margin-block: 3vh;
   line-height: 2;
 }
 .canvas2 .column {
@@ -529,16 +566,15 @@ footer p {
 }
 .canvas2 .left {
   width: 50%;
+  height: 50vh;
 }
 .canvas2 .right {
   width: 50%;
-}
-.canvas2 #graphique2 {
-  background-color: #00091f;
-  padding: 1rem;
-  border-radius: 10px;
-  width: 100%;
   height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 @media screen and (max-width: 1192px) {
   .canvas2 .column {
@@ -561,8 +597,8 @@ footer p {
   text-shadow: #e9e8fc 0px 0px 15px;
 }
 .canvas3 p {
-  margin-block: 3vh;
   padding-right: 5vw;
+  text-align: justify;
   line-height: 2;
 }
 .canvas3 .column {
@@ -570,9 +606,15 @@ footer p {
 }
 .canvas3 .left {
   width: 50%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 .canvas3 .right {
   width: 50%;
+  height: 50vh;
 }
 .canvas3 #graphique3 {
   background-color: #00091f;
@@ -599,36 +641,36 @@ footer p {
 
 .wikiplane {
   height: auto;
-  padding-block: 5vw;
+  padding: 4vw 5vw;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.wikiplane h1 {
-  text-shadow: #e9e8fc 0px 0px 15px;
+.wikiplane .column {
+  float: left;
 }
-.wikiplane .desc_wiki {
+.wikiplane .left {
   width: 50%;
-  margin-block: 3vh;
-  line-height: 2;
-  text-align: center;
+  height: 50vh;
+  background-color: #e9e8fc;
+  border-radius: 10px;
 }
-.wikiplane form {
-  background: #e9e8fc;
+.wikiplane .left form {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  width: 50vw;
   flex-direction: column;
   padding: 20px;
-  border-radius: 5px;
   color: #00091f;
+  padding: 1rem;
+  width: 100%;
+  height: 50vh;
 }
-.wikiplane form label {
+.wikiplane .left form label {
   margin-block: 2vh;
 }
-.wikiplane form select {
+.wikiplane .left form select {
   font-family: "Gathero";
   background: #ffffff;
   cursor: pointer;
@@ -637,9 +679,9 @@ footer p {
   padding: 20px;
   border-radius: 5px;
   width: 100%;
-  margin-block-end: 1vh;
+  margin-block-end: 2vh;
 }
-.wikiplane form input[type=submit] {
+.wikiplane .left form input[type=submit] {
   font-family: "Gathero";
   font-size: 1.125rem;
   background: #ffffff;
@@ -651,33 +693,57 @@ footer p {
   transition: all 0.3s;
   cursor: pointer;
 }
-.wikiplane form input[type=submit]:hover {
+.wikiplane .left form input[type=submit]:hover {
   background: #00091f;
   color: #e9e8fc;
   transform: scale(0.99);
 }
-.wikiplane form hr {
+.wikiplane .left form hr {
   width: 50%;
   border: 1px solid #ffffff;
 }
-.wikiplane form p {
+.wikiplane .left form p {
   margin-block: 2vh;
 }
-.wikiplane form img {
+.wikiplane .left form .divImg {
   background: #ffffff;
   padding: 20px;
   border-radius: 5px;
-  object-fit: cover;
+  height: 40vh;
+  overflow: hidden;
+}
+.wikiplane .left form .divImg img {
+  object-fit: contain;
   width: 100%;
+  height: 100%;
+  -webkit-animation: animationAvion 2s infinite alternate;
+  animation: animationAvion 2s infinite alternate;
+  opacity: 0;
 }
-.wikiplane form .specs_ul {
-  background: #ffffff;
-  border-radius: 5px;
-  padding: 20px;
+@keyframes animationAvion {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
-.wikiplane form .specs_ul ul {
-  list-style-type: disc;
-  margin-left: 1vw;
+.wikiplane .right {
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.wikiplane .right h1 {
+  text-shadow: #e9e8fc 0px 0px 15px;
+  text-align: right;
+}
+.wikiplane .right p {
+  padding-left: 5vw;
+  line-height: 2;
+  text-align: right;
 }
 
 .preloader {

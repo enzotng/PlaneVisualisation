@@ -1,11 +1,22 @@
 footer {
+    margin-top: 20vw;
     height: auto;
     display: flex;
     padding: 2vw;
     justify-content: center;
     align-items: center;
-    background: $bleu-fonce;
     flex-direction: column;
+    position: relative;
+    z-index: 6;
+    .svg_footer {
+        position: absolute;
+        bottom: 150px;
+        z-index: -1;
+    }
+    .imgFooter {
+        width: 10vw;
+        filter: drop-shadow(0 0 30px $bleu-fonce);
+    }
     ul {
         display: flex;
         justify-content: center;
@@ -25,7 +36,14 @@ footer {
             }
         }
     }
-    p{
+    p {
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 1192px) {
+    .imgFooter {
+        width: 100%;
+        filter: drop-shadow(0 0 30px $bleu-fonce);
     }
 }

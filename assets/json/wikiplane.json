@@ -1,78 +1,100 @@
 {
     "jsonWiki": [
+
         {
             "compagnie": {
                 "idCompagnie": "1",
+                "nomCompagnie": "Air Canada"
+            },
+            "idAvion": "1",
+            "constructeur": "Airbus",
+            "modele": "A319-100",
+            "longueur": "Longueur : 73,86 M",
+            "envergure": "Envergure : 64,80 M",
+            "nbSieges": "Nombre de sièges : 296 - 472",
+            "vitesse": "Vitesse de pointe : M 0,84",
+            "typeMoteur": "Type de moteur : GE90",
+            "imageSrc": "./assets/images/png/ACAA319.png"
+        },
+
+        {
+            "compagnie": {
+                "idCompagnie": "2",
                 "nomCompagnie": "Air France"
             },
-            "Boeing777": {
-                "idAvion": "1",
-                "constructeur": "Boeing",
-                "modele": "777W",
-                "specifications": {
-                    "longueur": "Longueur : 73,86 M",
-                    "envergure": "Envergure : 64,80 M",
-                    "nbSieges": "Nombre de sièges : 296 - 472",
-                    "vitesse": "Vitesse de pointe : M 0,84",
-                    "typeMoteur": "Type de moteur : GE90",
-                    "imageSrc": "./assets/images/png/AFR777.png"
-                }
-            },
-            "A350": {
-                "idAvion": "2",
-                "constructeur": "Airbus",
-                "modele": "A350-900",
-                "longueur": "Longueur : 73,86 M",
-                "imageSrc": "./assets/images/png/AFRA350.png"
-            },
-            "A320": {
-                "idAvion": "3",
-                "constructeur": "Airbus",
-                "modele": "A320",
-                "longueur": "Longueur : 73,86 M",
-                "imageSrc": "./assets/images/png/AFR777.png"
-            },
-            "A330": {
-                "idAvion": "4",
-                "constructeur": "Airbus",
-                "modele": "A330-200",
-                "longueur": "Longueur : 73,86 M",
-                "imageSrc": "./assets/images/png/AFR777.png"
-            }
+            "idAvion": "2",
+            "constructeur": "Boeing",
+            "modele": "777-300ER",
+            "longueur": "Longueur : 73,86 M",
+            "envergure": "Envergure : 64,80 M",
+            "nbSieges": "Nombre de sièges : 296 - 472",
+            "vitesse": "Vitesse de pointe : M 0,84",
+            "typeMoteur": "Type de moteur : GE90",
+            "imageSrc": "./assets/images/png/AFR777.png"
         },
+
         {
             "compagnie": {
-                "idCompagnie": "1",
-                "nomCompagnie": "American Airlines"
+                "idCompagnie": "4",
+                "nomCompagnie": "Emirates"
             },
-            "Boeing777": {
-                "idAvion": "1",
-                "constructeur": "Boeing",
-                "modele": "777W",
-                "longueur": "Longueur : 73,86 M",
-                "imageSrc": "./assets/images/png/AFR777.png"
+            "idAvion": "4",
+            "constructeur": "Airbus",
+            "modele": "A380-800",
+            "longueur": "Longueur : 73,86 M",
+            "envergure": "Envergure : 64,80 M",
+            "nbSieges": "Nombre de sièges : 296 - 472",
+            "vitesse": "Vitesse de pointe : M 0,84",
+            "typeMoteur": "Type de moteur : GE90",
+            "imageSrc": "./assets/images/png/UAEA380.png"
+        },
+
+        {
+            "compagnie": {
+                "idCompagnie": "5",
+                "nomCompagnie": "KLM Royal Dutch Airlines"
             },
-            "A350": {
-                "idAvion": "2",
-                "constructeur": "Airbus",
-                "modele": "A350-900",
-                "description": "Postegues",
-                "imageSrc": "./assets/images/png/AFRA350.png"
+            "idAvion": "5",
+            "constructeur": "Boeing",
+            "modele": "737-900",
+            "longueur": "Longueur : 73,86 M",
+            "envergure": "Envergure : 64,80 M",
+            "nbSieges": "Nombre de sièges : 296 - 472",
+            "vitesse": "Vitesse de pointe : M 0,84",
+            "typeMoteur": "Type de moteur : GE90",
+            "imageSrc": "./assets/images/png/KLM175.png"
+        },
+
+        {
+            "compagnie": {
+                "idCompagnie": "6",
+                "nomCompagnie": "Transavia"
             },
-            "A320": {
-                "idAvion": "3",
-                "constructeur": "Airbus",
-                "modele": "A320",
-                "description": "Russian",
-                "imageSrc": "./assets/images/png/AFR777.png"
+            "idAvion": "6",
+            "constructeur": "Boeing",
+            "modele": "737-800",
+            "longueur": "Longueur : 73,86 M",
+            "envergure": "Envergure : 64,80 M",
+            "nbSieges": "Nombre de sièges : 296 - 472",
+            "vitesse": "Vitesse de pointe : M 0,84",
+            "typeMoteur": "Type de moteur : GE90",
+            "imageSrc": "./assets/images/png/TVFB737.png"
+        },
+
+        {
+            "compagnie": {
+                "idCompagnie": "7",
+                "nomCompagnie": "Vietnam Airlines"
             },
-            "A330": {
-                "idAvion": "4",
-                "constructeur": "Airbus",
-                "modele": "A330-200",
-                "description": "Spanish",
-                "imageSrc": "./assets/images/png/AFR777.png"
-            }
+            "idAvion": "7",
+            "constructeur": "Airbus",
+            "modele": "A350-900XWB",
+            "longueur": "Longueur : 73,86 M",
+            "envergure": "Envergure : 64,80 M",
+            "nbSieges": "Nombre de sièges : 296 - 472",
+            "vitesse": "Vitesse de pointe : M 0,84",
+            "typeMoteur": "Type de moteur : GE90",
+            "imageSrc": "./assets/images/png/VNA350.png"
         }
     ]
 }

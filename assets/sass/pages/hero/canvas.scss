@@ -1,3 +1,15 @@
+
+
+canvas{
+    background-color: $background;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 100%;
+    min-height: 50vh;
+    filter: drop-shadow(0 0 10px $background);
+    object-fit: contain;
+}
+
 .canvas1 {
     min-height: 100vh;
     // background: $background;
@@ -9,9 +21,9 @@
         text-shadow: $blanc 0px 0px 15px;
     }
     p {
-        margin-block: 3vh;
         padding-right: 5vw;
         line-height: 2;
+        text-align: justify;
     }
     .column {
         float: left;
@@ -19,17 +31,15 @@
 
     .left {
         width: 50%;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 
     .right {
         width: 50%;
-    }
-
-    #graphique1 {
-        background-color: $background;
-        padding: 1rem;
-        border-radius: 10px;
-        width: 100%;
         height: 50vh;
     }
 
@@ -68,7 +78,6 @@
     }
     p {
         padding-left: 5vw;
-        margin-block: 3vh;
         line-height: 2;
     }
     .column {
@@ -77,18 +86,16 @@
 
     .left {
         width: 50%;
+        height: 50vh;
     }
 
     .right {
         width: 50%;
-    }
-
-    #graphique2 {
-        background-color: $background;
-        padding: 1rem;
-        border-radius: 10px;
-        width: 100%;
         height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
     }
 
     @media screen and (max-width: 1192px) {
@@ -114,8 +121,8 @@
         text-shadow: $blanc 0px 0px 15px;
     }
     p {
-        margin-block: 3vh;
         padding-right: 5vw;
+        text-align: justify;
         line-height: 2;
     }
     .column {
@@ -124,10 +131,16 @@
 
     .left {
         width: 50%;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 
     .right {
         width: 50%;
+        height: 50vh;
     }
 
     #graphique3 {
