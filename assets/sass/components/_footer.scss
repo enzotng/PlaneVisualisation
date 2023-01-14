@@ -42,8 +42,9 @@ footer {
 }
 
 @media screen and (max-width: 1192px) {
-    .imgFooter {
-        width: 100%;
-        filter: drop-shadow(0 0 30px $bleu-fonce);
+    footer{
+        .imgFooter {
+            width: 50%;
+        }
     }
 }

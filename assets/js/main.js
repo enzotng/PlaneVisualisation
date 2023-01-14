@@ -14,14 +14,14 @@ window.onload = function () {
   }
 
   var x = window.matchMedia("(max-width: 1192px)");
-  responsiveCanvas(x); // Call listener function at run time
-  x.addListener(responsiveCanvas); // Attach listener function on state changes
+  responsiveCanvas(x);
+  x.addListener(responsiveCanvas);
 
   getData();
 
   async function getData() {
     const requete = await fetch(
-      // "https://airlabs.co/api/v9/routes?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034&dep_iata=CDG"
+      "https://airlabs.co/api/v9/routes?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034&dep_iata=CDG"
     );
     console.log(requete);
     const response = await requete.json();
@@ -70,7 +70,7 @@ window.onload = function () {
     });
 
     const requete2 = await fetch(
-      // "https://airlabs.co/api/v9/routes?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034&arr_iata=CDG"
+      "https://airlabs.co/api/v9/routes?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034&arr_iata=CDG"
     );
     console.log(requete2);
     const response2 = await requete2.json();
@@ -167,7 +167,6 @@ $(window).on("load", function () {
 
 select = $('#modeleAvion');
 select2 = $('#compagnie');
-specsLi = $('#specs');
 
 $.ajax({
   url: '../assets/json/wikiplane.json',
@@ -192,8 +191,8 @@ $.ajax({
     })
   },
   error: function () {
-    $select.html('<option id="-1">Aucune compagnie disponible</option>');
-    $select2.html('<option id="-1">Aucune compagnie disponible</option>');
+    $select.html('<option value="-1">Aucune compagnie disponible</option>');
+    $select2.html('<option value="-1">Aucun modèle disponible</option>');
   },
 
 });
