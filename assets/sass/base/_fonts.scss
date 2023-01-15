@@ -10,6 +10,10 @@ h1 {
     font-size: clamp(1.5rem, -0.1667rem + 8.3333vw, 5rem);
 }
 
+h2 {
+    font-size: clamp(1rem, 0.8165rem + 0.9174vw, 1.5rem);
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }

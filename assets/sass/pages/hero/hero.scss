@@ -1,5 +1,5 @@
 .hero {
-    height: calc(110vh - 80px);
+    height: calc(100vh - 80px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,13 +11,13 @@
         text-shadow: $blanc 0px 0px 15px;
         margin-bottom: 2vh;
     }
-    h2{
-        font-size: 1.5rem;
+    h2 {
+        text-align: center;
     }
 
     .scroll-down {
         position: absolute;
-        bottom: 15vh;
+        bottom: 10vh;
         transform: translate(-50%, -50%);
         span {
             &:nth-child(2) {
@@ -52,6 +52,27 @@
     }
 }
 
+@media screen and (max-width: 1192px) {
+    .column {
+        width: 100%;
+    }
+
+    .svg_transition {
+        display: none;
+    }
+
+    .canvas1 {
+        p {
+            text-align: center;
+        }
+    }
+
+    #graphique1 {
+        margin-block: 5vh;
+        width: 100%;
+    }
+}
+
 $switch-speed: 1s;
 $slider-number: 5;
 $slider-width: 100% / $slider-number;
@@ -71,7 +92,7 @@ $slider-width: 100% / $slider-number;
         align-items: center;
         border-radius: 20px;
         // background: $bleu-fonce;
-        box-shadow: 0 8px 32px 0 rgba(0, 9 ,31, 0.35);
+        box-shadow: 0 8px 32px 0 rgba(0, 9, 31, 0.35);
         backdrop-filter: blur(30px);
         -webkit-backdrop-filter: blur(30px);
         overflow: hidden;

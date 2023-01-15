@@ -1,27 +1,29 @@
 window.onload = function () {
-  function responsiveCanvas(x) {
-    if (x.matches) {
-      var canvas = document.getElementById("graphique2");
-      var heightRatio = 1.5;
-      canvas.height = canvas.width * heightRatio;
-      canvas.margin = "5vh";
-      document.getElementById("canvas2").style.height = "auto";
-    } else {
-      var canvas = document.getElementById("graphique2");
-      var heightRatio = 1.5;
-      canvas.height = canvas.width * heightRatio;
-    }
-  }
+  // function responsiveCanvas(x) {
+  //   if (x.matches) {
+  //     var canvas = document.getElementById("graphique1");
+  //     var heightRatio = 1.5;
+  //     canvas.height = canvas.width * heightRatio;
+  //     canvas.margin = "5vh";
+  //     document.getElementById("canvas2").style.height = "auto";
+  //   } else {
+  //     var canvas = document.getElementById("graphique2");
+  //     var heightRatio = 1.5;
+  //     canvas.height = canvas.width * heightRatio;
+  //   }
+  // }
 
-  var x = window.matchMedia("(max-width: 1192px)");
-  responsiveCanvas(x);
-  x.addListener(responsiveCanvas);
+  // var x = window.matchMedia("(max-width: 1192px)");
+  // responsiveCanvas(x);
+  // x.addListener(responsiveCanvas);
+
+  AOS.init();
 
   getData();
 
   async function getData() {
     const requete = await fetch(
-      "https://airlabs.co/api/v9/routes?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034&dep_iata=CDG"
+      // "https://airlabs.co/api/v9/routes?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034&dep_iata=CDG"
     );
     console.log(requete);
     const response = await requete.json();
@@ -33,7 +35,7 @@ window.onload = function () {
     values = [];
     console.log(labels);
     for (i = 0; i < 50; i++) {
-      labels.push(response.response[i].aircraft_icao);
+      labels.push(response.response[i].flight_iata);
       values.push(response.response[i].duration);
     }
 
@@ -45,7 +47,7 @@ window.onload = function () {
         labels: labels,
         datasets: [
           {
-            label: "Vols",
+            label: "Vols par mois",
             backgroundColor: [
               "#3e95cd",
               "#8e5ea2",
@@ -65,12 +67,16 @@ window.onload = function () {
       },
       options: {
         responsive: true,
-        legend: { display: false },
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
       },
     });
 
     const requete2 = await fetch(
-      "https://airlabs.co/api/v9/routes?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034&arr_iata=CDG"
+      // "https://airlabs.co/api/v9/routes?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034&arr_iata=CDG"
     );
     console.log(requete2);
     const response2 = await requete2.json();
@@ -89,7 +95,7 @@ window.onload = function () {
     Chart.defaults.font.size = 18;
     Chart.defaults.color = '#fff';
     new Chart(document.getElementById("graphique2"), {
-      type: "bar",
+      type: "line",
       data: {
         labels: labels,
         datasets: [

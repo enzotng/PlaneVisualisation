@@ -145,6 +145,10 @@ h1 {
   font-size: clamp(1.5rem, -0.1667rem + 8.3333vw, 5rem);
 }
 
+h2 {
+  font-size: clamp(1rem, 0.8165rem + 0.9174vw, 1.5rem);
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
@@ -295,7 +299,7 @@ footer p {
   }
 }
 .hero {
-  height: calc(110vh - 80px);
+  height: calc(100vh - 80px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -309,11 +313,11 @@ footer p {
   margin-bottom: 2vh;
 }
 .hero h2 {
-  font-size: 1.5rem;
+  text-align: center;
 }
 .hero .scroll-down {
   position: absolute;
-  bottom: 15vh;
+  bottom: 10vh;
   transform: translate(-50%, -50%);
 }
 .hero .scroll-down span {
@@ -346,6 +350,21 @@ footer p {
   }
 }
 
+@media screen and (max-width: 1192px) {
+  .column {
+    width: 100%;
+  }
+  .svg_transition {
+    display: none;
+  }
+  .canvas1 p {
+    text-align: center;
+  }
+  #graphique1 {
+    margin-block: 5vh;
+    width: 100%;
+  }
+}
 .section_slider {
   display: flex;
   justify-content: center;
@@ -490,11 +509,11 @@ footer p {
 }
 
 canvas {
-  background-color: #00091f;
+  background-color: #07062c;
   padding: 1rem;
   border-radius: 10px;
   width: 100%;
-  min-height: 50vh;
+  height: 50vh !important;
   filter: drop-shadow(0 0 10px #00091f);
   object-fit: contain;
 }
@@ -508,6 +527,7 @@ canvas {
 }
 .canvas1 h1 {
   text-shadow: #e9e8fc 0px 0px 15px;
+  margin-block-end: 2vh;
 }
 .canvas1 p {
   padding-right: 5vw;
@@ -519,7 +539,7 @@ canvas {
 }
 .canvas1 .left {
   width: 50%;
-  height: 50vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -527,7 +547,7 @@ canvas {
 }
 .canvas1 .right {
   width: 50%;
-  height: 50vh;
+  height: 70vh;
 }
 @media screen and (max-width: 1192px) {
   .canvas1 .column {
@@ -555,6 +575,7 @@ canvas {
 }
 .canvas2 h1 {
   text-shadow: #e9e8fc 0px 0px 15px;
+  margin-block-end: 2vh;
 }
 .canvas2 p {
   padding-left: 5vw;
@@ -565,11 +586,11 @@ canvas {
 }
 .canvas2 .left {
   width: 50%;
-  height: 50vh;
+  height: 70vh;
 }
 .canvas2 .right {
   width: 50%;
-  height: 50vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -594,6 +615,7 @@ canvas {
 }
 .canvas3 h1 {
   text-shadow: #e9e8fc 0px 0px 15px;
+  margin-block-end: 2vh;
 }
 .canvas3 p {
   padding-right: 5vw;
@@ -605,7 +627,7 @@ canvas {
 }
 .canvas3 .left {
   width: 50%;
-  height: 50vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -613,7 +635,7 @@ canvas {
 }
 .canvas3 .right {
   width: 50%;
-  height: 50vh;
+  height: 70vh;
 }
 .canvas3 #graphique3 {
   background-color: #00091f;
@@ -651,7 +673,7 @@ canvas {
 }
 .wikiplane .left {
   width: 50%;
-  height: 50vh;
+  height: 70vh;
   background-color: #e9e8fc;
   border-radius: 10px;
 }
@@ -664,7 +686,7 @@ canvas {
   color: #00091f;
   padding: 1rem;
   width: 100%;
-  height: 50vh;
+  height: 70vh;
 }
 .wikiplane .left form label {
   margin-block: 2vh;
@@ -729,7 +751,7 @@ canvas {
 }
 .wikiplane .right {
   width: 50%;
-  height: 50vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

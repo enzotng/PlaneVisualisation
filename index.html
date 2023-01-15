@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./assets/images/ico/logoVF.ico" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Homepage - Fly smarter with PlaneVisualization's data insights</title>
 </head>
@@ -25,7 +27,7 @@
             <h1>Plane Visualization</h1>
             <h2>Fly smarter with PlaneVisualization's data insights</h2>
             <div class="scroll-down">
-                <a href="#canvas1">
+                <a href="#graphique_section">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -33,7 +35,7 @@
             </div>
         </section>
 
-        <section class="section_slider">
+        <section id="graphique_section" class="section_slider">
             <div class="s-wrap s-type-1" role="slider">
                 <input type="radio" id="s-1" name="slider-control" checked="checked">
                 <input type="radio" id="s-2" name="slider-control">
@@ -44,14 +46,21 @@
                         <section id="canvas1" class="canvas1">
                             <div class="row">
                                 <div class="column left">
-                                    <h1>Departure flights from CDG</h1>
-                                    <p>Departure flights from Charles de Gaulle Airport (CDG) are the perfect opportunity to discover new destinations around the world. From one of France's main international airports, passengers can fly to destinations such as New York, Tokyo, Sydney, Rio de Janeiro and many more.</p>
-                                    <p>It also offer a variety of travel classes, from economy to business and first class, to meet the needs of all types of travelers. Whether you're on a business trip or on vacation, there is a departure flight from CDG that fits your needs.</p>
-                                    <p>This data visualization presents an overview of the departures of a certain number of aircrafts per month.</p>
-                                    <a href="#test2" class="lien">Next chart</a>
+                                    <h1 data-aos="fade-up">Departure flights from CDG</h1>
+                                    <p data-aos="fade-up" data-aos-delay="200">Departure flights from Charles de Gaulle Airport (CDG) are the perfect
+                                        opportunity to discover new destinations around the world. From one of France's
+                                        main international airports, passengers can fly to destinations such as New
+                                        York, Tokyo, Sydney, Rio de Janeiro and many more.</p>
+                                    <p data-aos="fade-up" data-aos-delay="400">It also offer a variety of travel classes, from economy to business and first
+                                        class, to meet the needs of all types of travelers. Whether you're on a business
+                                        trip or on vacation, there is a departure flight from CDG that fits your needs.
+                                    </p>
+                                    <p data-aos="fade-up" data-aos-delay="400">This data visualization presents an overview of the departures of a certain
+                                        number of aircrafts per month.</p>
+                                    <!-- <a href="#test2" class="lien">Next chart</a> -->
                                 </div>
                                 <div class="column right">
-                                    <canvas id="graphique1"></canvas>
+                                    <canvas data-aos="fade-left" data-aos-delay="1000" id="graphique1"></canvas>
                                 </div>
                             </div>
                         </section>
@@ -60,14 +69,22 @@
                         <section id="canvas2" class="canvas2">
                             <div class="row">
                                 <div class="column left">
-                                    <canvas id="graphique2"></canvas>
+                                    <canvas data-aos="fade-right" data-aos-delay="1000" id="graphique2"></canvas>
                                 </div>
                                 <div class="column right">
-                                    <h1>Arrival flights from CDG</h1>
-                                    <p>Arrival flights to Charles de Gaulle Airport (CDG) offer a glimpse into the internationality of France. Passengers can arrive at CDG from destinations such as New York, Tokyo, Sydney, Rio de Janeiro and many more.</p>
-                                    <p>Arrival flights to CDG also offer a variety of services for passengers such as quick customs formalities, transportation options to the city and efficient baggage claim services. Arrival to CDG are an opportunity to discover France and its many destinations around the world. With the data visualization presenting an overview of arrivals, users can easily plan their trip and explore the trends of aircraft arrivals.</p>
-                                    <p>This data visualization presents an overview of the arrivals of a certain number of aircrafts per month.</p>
-                                    <a href="#test1" class="lien">Previous chart</a>
+                                    <h1 data-aos="fade-up">Arrival flights from CDG</h1>
+                                    <p data-aos="fade-up" data-aos-delay="200">Arrival flights to Charles de Gaulle Airport (CDG) offer a glimpse into the
+                                        internationality of France. Passengers can arrive at CDG from destinations such
+                                        as New York, Tokyo, Sydney, Rio de Janeiro and many more.</p>
+                                    <p data-aos="fade-up" data-aos-delay="400">Arrival flights to CDG also offer a variety of services for passengers such as
+                                        quick customs formalities, transportation options to the city and efficient
+                                        baggage claim services. Arrival to CDG are an opportunity to discover France and
+                                        its many destinations around the world. With the data visualization presenting
+                                        an overview of arrivals, users can easily plan their trip and explore the trends
+                                        of aircraft arrivals.</p>
+                                    <p data-aos="fade-up" data-aos-delay="400">This data visualization presents an overview of the arrivals of a certain number
+                                        of aircrafts per month.</p>
+                                    <!-- <a href="#test1" class="lien">Previous chart</a> -->
                                 </div>
                             </div>
                         </section>
@@ -77,10 +94,21 @@
                             <div class="row">
                                 <div class="column left">
                                     <h1>All airports in the world</h1>
-                                    <p>Airports are key hubs of global connectivity, allowing people to travel quickly and efficiently from one place to another. There are thousands of airports around the world, ranging from large international hubs to small regional airports. Large international airports, such as Heathrow in London, Charles de Gaulle in Paris, and John F. Kennedy in New York, are major stopping points for international travelers and serve millions of passengers each year. They have modern facilities, shops, restaurants, VIP lounges, and shuttle services for travelers.</p>
-                                    <p>On the other hand, small regional airports generally serve more limited destinations and have more modest facilities. They are often used by local travelers for domestic flights or flights to tourist destinations.</p>
-                                    <p>This graph is the representation of all airports in the world using a CSV file including their name, latitude and longitude. Regarding the map, Leaflet is an interactive map that allows for the display of the entire world.</p>
-                                    <a href="#s-item-4" class="lien">Next chart</a>
+                                    <p>Airports are key hubs of global connectivity, allowing people to travel quickly
+                                        and efficiently from one place to another. There are thousands of airports
+                                        around the world, ranging from large international hubs to small regional
+                                        airports. Large international airports, such as Heathrow in London, Charles de
+                                        Gaulle in Paris, and John F. Kennedy in New York, are major stopping points for
+                                        international travelers and serve millions of passengers each year. They have
+                                        modern facilities, shops, restaurants, VIP lounges, and shuttle services for
+                                        travelers.</p>
+                                    <p>On the other hand, small regional airports generally serve more limited
+                                        destinations and have more modest facilities. They are often used by local
+                                        travelers for domestic flights or flights to tourist destinations.</p>
+                                    <p>This graph is the representation of all airports in the world using a CSV file
+                                        including their name, latitude and longitude. Regarding the map, Leaflet is an
+                                        interactive map that allows for the display of the entire world.</p>
+                                    <!-- <a href="#s-item-4" class="lien">Next chart</a> -->
                                 </div>
                                 <div class="column right">
                                     <div id="graphique3"></div>
@@ -97,14 +125,14 @@
                                         <label>Compagnie aérienne :</label>
                                         <select name="compagnie" id="compagnie">
                                         </select>
-                    
+
                                         <label>Modèle :</label>
                                         <select name="modeleAvion" id="modeleAvion">
                                             <option value="1">Boeing 777-300ER</option>
                                         </select>
-                    
+
                                         <hr>
-                    
+
                                         <p>Résultat pour : </p>
                                         <div class="divImg">
                                             <img class="imageModele" src="./assets/images/png/AFR777.png" alt="">
@@ -113,8 +141,13 @@
                                 </div>
                                 <div class="column right">
                                     <h1>WikiPlane</h1>
-                                    <p>Wikiplane is an online platform that provides a vast collection of information on airplanes and airlines. It is a true flight log for aviation enthusiasts, frequent travelers and professionals in the aviation industry. The platform provides detailed information on different types of airplanes, from jets to propeller planes, as well as information on airlines, flight routes and schedules. Users can also view information on airports, terminals, services and amenities.</p>
-                                    <a href="#canvas2" class="lien">Next chart</a>
+                                    <p>Wikiplane is an online platform that provides a vast collection of information on
+                                        airplanes and airlines. It is a true flight log for aviation enthusiasts,
+                                        frequent travelers and professionals in the aviation industry. The platform
+                                        provides detailed information on different types of airplanes, from jets to
+                                        propeller planes, as well as information on airlines, flight routes and
+                                        schedules. Users can also view information on airports, terminals, services and
+                                        amenities.</p>
                                 </div>
                         </section>
                     </li>
@@ -134,14 +167,15 @@
                     <label class="s-nav-4 left" for="s-3"></label>
                 </div>
             </div>
+        </section>
 
     </main>
     <footer>
         <img class="imgFooter" src="./assets/images/png/LogoSite.png" alt="">
         <ul>
-            <li><a href=""><i class="bi bi-github"></i></a></li>
-            <li><a href=""><i class="bi bi-linkedin"></i></a></li>
-            <li><a href=""><i class="bi bi-globe"></i></a></li>
+            <li><a href="https://github.com/enzotng" target="_blank"><i class="bi bi-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/enzotang/" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+            <li><a href="https://enzotang.fr/" target="_blank"><i class="bi bi-globe"></i></a></li>
         </ul>
         <p>Copyright ©
             <script>document.write(new Date().getFullYear())</script> Enzo Tang. All Rights Reserved.
@@ -153,11 +187,9 @@
     integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
-    integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script src="./assets/js/main.js"></script>
 
