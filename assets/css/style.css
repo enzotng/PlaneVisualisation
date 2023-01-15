@@ -754,12 +754,13 @@ canvas {
   height: 70vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-end;
 }
 .wikiplane .right h1 {
   text-shadow: #e9e8fc 0px 0px 15px;
   text-align: right;
+  margin-bottom: 2vh;
 }
 .wikiplane .right p {
   padding-left: 5vw;
