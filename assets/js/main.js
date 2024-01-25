@@ -129,8 +129,8 @@ window.onload = function () {
     });
   }
 
+  // Initialisation de la carte Leaflet
   var map = L.map("graphique3").setView([0, 0], 2);
-
   L.tileLayer(
     "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
     {
@@ -139,26 +139,24 @@ window.onload = function () {
     }
   ).addTo(map);
 
-  var data = "./assets/airports.csv";
-  var lines = data.split("\n");
-  var markers = [];
-  for (var i = 1; i < lines.length; i++) {
-    var parts = lines[i].split(",");
-    if (i > 1) {
-      markers.push([parts[0], Number(parts[18]), Number(parts[19])]);
-    }
-  }
-  for (var i = 0; i < markers.length; i++) {
-    var lat = markers[i][1];
-    var lon = markers[i][2];
-    var popupText = markers[i][0];
+  // Lecture et traitement du fichier CSV
+  fetch("./assets/csv/airports.csv")
+    .then(response => response.text())
+    .then(text => {
+      var lines = text.split("\n");
+      for (var i = 1; i < lines.length; i++) {
+        var parts = lines[i].split(",");
+        var name = parts[0]; // Nom de l'aéroport
+        var lon = parseFloat(parts[1]); // Longitude
+        var lat = parseFloat(parts[2]); // Latitude
 
-    var markerLocation = new L.LatLng(lat, lon);
-    var marker = new L.Marker(markerLocation);
-    map.addLayer(marker);
-
-    marker.bindPopup(popupText);
-  }
+        // Vérification de la validité des données
+        if (!isNaN(lat) && !isNaN(lon)) {
+          var marker = L.marker([lat, lon]).addTo(map);
+          marker.bindPopup(name);
+        }
+      }
+    });
 
 };
 
@@ -178,27 +176,25 @@ $.ajax({
   url: '../assets/json/wikiplane.json',
   dataType: 'JSON',
   success: function (data) {
-    // console.log(data.jsonWiki[0].Boeing777.constructeur);
     $.each(data.jsonWiki, function (val2) {
-      // console.log(data.jsonWiki[val2].compagnie.nomCompagnie);
       select2.append('<option data-nom = "' + data.jsonWiki[val2].compagnie.nomCompagnie + '" value="' + data.jsonWiki[val2].constructeur + " " + data.jsonWiki[val2].modele + ',' + data.jsonWiki[val2].imageSrc + '">' + data.jsonWiki[val2].compagnie.nomCompagnie + '</option>');
-    })
+    });
+
+    // Définir l'image pour le premier élément après avoir rempli la liste déroulante
+    if (data.jsonWiki.length > 0) {
+      var firstItem = data.jsonWiki[0];
+      $(".imageModele").attr('src', firstItem.imageSrc);
+      $("#modeleAvion option").html(firstItem.constructeur + " " + firstItem.modele);
+    }
+
     $("select").on('change', function (e) {
-      // console.log($(this).val());
-      // $("#modeleAvion option").val($(this).val());
-      let tab = $(this).val();
-      tab = tab.split(",");
-      console.log(tab);
+      let tab = $(this).val().split(",");
       $("#modeleAvion option").html(tab[0]);
       $(".imageModele").attr('src', tab[1]);
-      $("#compagnie").click(function(){
-        $(".imageModele").animate({opacity: '1',});
-      });
-    })
+    });
   },
   error: function () {
-    $select.html('<option value="-1">Aucune compagnie disponible</option>');
-    $select2.html('<option value="-1">Aucun modèle disponible</option>');
+    select.html('<option value="-1">Aucune compagnie disponible</option>');
+    select2.html('<option value="-1">Aucun modèle disponible</option>');
   },
-
 });

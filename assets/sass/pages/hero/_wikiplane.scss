@@ -11,7 +11,6 @@
     }
 
     .left {
-        width: 50%;
         height: 70vh;
         background-color: $blanc;
         border-radius: 10px;
@@ -75,7 +74,7 @@
                     height: 100%;
                     -webkit-animation: animationAvion 2s infinite  alternate;
                     animation: animationAvion 2s infinite  alternate;
-                    opacity: 0;
+                    // opacity: 0;
                     @keyframes animationAvion {
                         0% { transform: translateY(0); }
                         100% { transform: translateY(-10px); }
@@ -86,7 +85,6 @@
     }
 
     .right {
-        width: 50%;
         height: 70vh;
         display: flex;
         flex-direction: column;

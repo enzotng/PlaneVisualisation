@@ -2,8 +2,19 @@ header {
     height: 80px;
     padding: 20px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: stretch;
+    nav {
+        ul {
+            display: flex;
+            gap: 10px;
+            li {
+                a {
+                    color: $blanc;
+                }
+            }
+        }
+    }
     span{
         color: $blanc;
         i{
