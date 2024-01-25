@@ -1,0 +1,5 @@
+# Ignorer le fichier .htaccess
+.htaccess
+
+# Ignorer le répertoire .sass-cache
+.sass-cache/
