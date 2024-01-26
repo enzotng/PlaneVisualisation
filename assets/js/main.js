@@ -40,7 +40,7 @@ window.onload = function () {
     }
 
     Chart.defaults.font.size = 18;
-    Chart.defaults.color = '#fff';
+    Chart.defaults.color = "#fff";
     new Chart(document.getElementById("graphique1"), {
       type: "bar",
       data: {
@@ -93,7 +93,7 @@ window.onload = function () {
     }
 
     Chart.defaults.font.size = 18;
-    Chart.defaults.color = '#fff';
+    Chart.defaults.color = "#fff";
     new Chart(document.getElementById("graphique2"), {
       type: "line",
       data: {
@@ -141,8 +141,8 @@ window.onload = function () {
 
   // Lecture et traitement du fichier CSV
   fetch("./assets/csv/airports.csv")
-    .then(response => response.text())
-    .then(text => {
+    .then((response) => response.text())
+    .then((text) => {
       var lines = text.split("\n");
       for (var i = 1; i < lines.length; i++) {
         var parts = lines[i].split(",");
@@ -157,7 +157,6 @@ window.onload = function () {
         }
       }
     });
-
 };
 
 $(window).on("load", function () {
@@ -169,28 +168,42 @@ $(window).on("load", function () {
 
 // WikiPlane Dropdown
 
-select = $('#modeleAvion');
-select2 = $('#compagnie');
+select = $("#modeleAvion");
+select2 = $("#compagnie");
 
 $.ajax({
-  url: '../assets/json/wikiplane.json',
-  dataType: 'JSON',
+  url: "../assets/json/wikiplane.json",
+  dataType: "JSON",
   success: function (data) {
     $.each(data.jsonWiki, function (val2) {
-      select2.append('<option data-nom = "' + data.jsonWiki[val2].compagnie.nomCompagnie + '" value="' + data.jsonWiki[val2].constructeur + " " + data.jsonWiki[val2].modele + ',' + data.jsonWiki[val2].imageSrc + '">' + data.jsonWiki[val2].compagnie.nomCompagnie + '</option>');
+      select2.append(
+        '<option data-nom = "' +
+          data.jsonWiki[val2].compagnie.nomCompagnie +
+          '" value="' +
+          data.jsonWiki[val2].constructeur +
+          " " +
+          data.jsonWiki[val2].modele +
+          "," +
+          data.jsonWiki[val2].imageSrc +
+          '">' +
+          data.jsonWiki[val2].compagnie.nomCompagnie +
+          "</option>"
+      );
     });
 
     // Définir l'image pour le premier élément après avoir rempli la liste déroulante
     if (data.jsonWiki.length > 0) {
       var firstItem = data.jsonWiki[0];
-      $(".imageModele").attr('src', firstItem.imageSrc);
-      $("#modeleAvion option").html(firstItem.constructeur + " " + firstItem.modele);
+      $(".imageModele").attr("src", firstItem.imageSrc);
+      $("#modeleAvion option").html(
+        firstItem.constructeur + " " + firstItem.modele
+      );
     }
 
-    $("select").on('change', function (e) {
+    $("select").on("change", function (e) {
       let tab = $(this).val().split(",");
       $("#modeleAvion option").html(tab[0]);
-      $(".imageModele").attr('src', tab[1]);
+      $(".imageModele").attr("src", tab[1]);
     });
   },
   error: function () {
@@ -198,3 +211,44 @@ $.ajax({
     select2.html('<option value="-1">Aucun modèle disponible</option>');
   },
 });
+
+var mymap = L.map("map-aircraft-reel").setView([51.505, -0.09], 2);
+
+L.tileLayer(
+  "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+  {
+    attribution:
+      "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+  }
+).addTo(mymap);
+
+var planeIcon = L.icon({
+  iconUrl: "./assets/images/svg/aircraft.svg",
+  iconSize: [38, 38],
+  iconAnchor: [22, 94],
+  popupAnchor: [-3, -76],
+});
+
+function updatePlanes() {
+  fetch(
+    "https://airlabs.co/api/v9/flights?api_key=dd764152-cdbc-4b0e-8100-3a81aba2a034"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      let flights = data.response;
+      for (let i = 0; i < 10; i++) {
+        let flight = flights[i];
+        if (flight) {
+          L.marker([flight.lat, flight.lng], { icon: planeIcon })
+            .addTo(mymap)
+            .bindPopup(
+              `${flight.dep_icao} > ${flight.arr_icao}<br>Flight number: ${flight.flight_icao}<br>Altitude: ${flight.alt} m<br>Aircraft type: ${flight.aircraft_icao}<br>Speed: ${flight.speed} km/h`
+            );
+        }
+      }
+    })
+    .catch((error) => console.error("Erreur:", error));
+}
+
+updatePlanes();
+setInterval(updatePlanes, 50000);

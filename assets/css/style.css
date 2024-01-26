@@ -203,20 +203,23 @@ a {
     color: #e9e8fc;
     transform: scale(0.9); }
 
-header {
+.header {
   height: 80px;
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  align-items: stretch; }
-  header nav ul {
+  align-items: center; }
+  .header nav ul {
     display: flex;
     gap: 10px; }
-    header nav ul li a {
-      color: #e9e8fc; }
-  header span {
+    .header nav ul li a {
+      color: #e9e8fc;
+      padding-bottom: 5px; }
+      .header nav ul li a.active {
+        border-bottom: 1px solid #e9e8fc; }
+  .header span {
     color: #e9e8fc; }
-    header span i {
+    .header span i {
       color: red;
       padding-inline: 5px; }
 
@@ -425,6 +428,21 @@ footer {
   border: 1px solid #e9e8fc; }
 .s-type-1 #s-5:checked ~ .s-nav .s-nav-5 {
   display: block; }
+
+.map-plane {
+  margin: 0 auto;
+  height: fit-content;
+  width: calc(100% - 100px);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  background-color: #00091f;
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  padding: 40px; }
+  .map-plane #map-aircraft-reel {
+    border-radius: 20px; }
 
 canvas {
   background-color: #07062c;

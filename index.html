@@ -14,20 +14,20 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <nav>
             <ul>
-                <li><a>Home</a></li>
-                <li><a>Settings</a></li>
+                <li><a class="active" href="/">Home</a></li>
+                <li><a href="/">Settings</a></li>
             </ul>
         </nav>
         <span>Made with <i class="bi bi-heart-fill"></i> by Enzo Tang</span>
     </header>
     <main>
 
-        <div class="preloader">
+        <!-- <div class="preloader">
             <span class="loader"></span>
-        </div>
+        </div> -->
 
         <section id="hero" class="hero">
             <h1>Plane Visualization</h1>
@@ -39,6 +39,12 @@
                     <span></span>
                 </a>
             </div>
+        </section>
+
+        <section id="map-plane" class="map-plane">
+            <h2>Tourism planets</h2>
+            <div id="map-aircraft-reel" style="width: 100%; height: 600px;"></div>
+
         </section>
 
     </main>

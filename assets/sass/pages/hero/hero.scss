@@ -200,3 +200,20 @@ $slider-width: 100% / $slider-number;
         }
     }
 }
+
+.map-plane {
+    margin: 0 auto;
+    height: fit-content;
+    width: calc(100% - 100px);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+    background-color: $background;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    padding: 40px;
+    #map-aircraft-reel {
+        border-radius: 20px;
+    }
+}
